@@ -1,0 +1,1542 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\files\images\background\customer_bg.webp" />
+    <Content Remove="wwwroot\files\images\products\1-32c28533-6584-485d-8aa6-724fd71da575.webp" />
+    <Content Remove="wwwroot\files\images\products\1e9d5446-7b37-4b0a-a275-dc1c648a6972.webp" />
+    <Content Remove="wwwroot\files\images\products\2-05d45d20-451e-48c7-9513-852dc4a063f6.webp" />
+    <Content Remove="wwwroot\files\images\products\2014ffe2-a5d3-4ccb-a660-a0a3e4384138.webp" />
+    <Content Remove="wwwroot\files\images\products\4ccb-a660-a0a3e4384138.webp" />
+    <Content Remove="wwwroot\files\images\products\71-copy.webp" />
+    <Content Remove="wwwroot\files\images\products\782s7jmg-1-ct5t-hinh-mat-truoc-0.webp" />
+    <Content Remove="wwwroot\files\images\products\78b0c9e6-f805-4422-9a5a-fbb9f8c879b0.webp" />
+    <Content Remove="wwwroot\files\images\products\7c740972-8b7c-4b4a-a331-522826468556.webp" />
+    <Content Remove="wwwroot\files\images\products\897b53bbcbf83a9f3bf07214fcdeb93d.webp" />
+    <Content Remove="wwwroot\files\images\products\8aa6-724fd71da575.webp" />
+    <Content Remove="wwwroot\files\images\products\8ab6dc5708ddc88391cc.webp" />
+    <Content Remove="wwwroot\files\images\products\8f87ee42-de22-415d-a5a2-0a67b59899fb.webp" />
+    <Content Remove="wwwroot\files\images\products\97ed-bf70bd2c954c.webp" />
+    <Content Remove="wwwroot\files\images\products\9c425ca0-96da-4ec6-b638-b09bc3e09768 %281%29.webp" />
+    <Content Remove="wwwroot\files\images\products\9c425ca0-96da-4ec6-b638-b09bc3e09768.webp" />
+    <Content Remove="wwwroot\files\images\products\b16b-47c7-bac4-46e96ce1e728.webp" />
+    <Content Remove="wwwroot\files\images\products\b8a822d8-8731-490b-9d32-5f08ffa8663d.webp" />
+    <Content Remove="wwwroot\files\images\products\bang-size-varsity.webp" />
+    <Content Remove="wwwroot\files\images\products\e6dd2381a541641f3d50-jpeg.webp" />
+    <Content Remove="wwwroot\files\images\products\f2ff1c0b-7e40-4bd3-97ba-7253fecce5e5-64eb45b7-b16b-47c7-bac4-46e96ce1e728.webp" />
+    <Content Remove="wwwroot\files\images\products\f7512451-c825-488d-842d-260811159018.webp" />
+    <Content Remove="wwwroot\files\images\products\jhpwu5y2-1-psm9-hinh-mat-sau-0-jpeg.webp" />
+    <Content Remove="wwwroot\files\images\products\jhpwu5y2-1-psm9-hinh-mat-truoc-0-jpeg.webp" />
+    <Content Remove="wwwroot\files\images\products\mat-truoc-0-jpeg.webp" />
+    <Content Remove="wwwroot\files\images\products\neutron-chute-bomber.webp" />
+    <Content Remove="wwwroot\files\images\products\rev-bl1.webp" />
+    <Content Remove="wwwroot\files\images\products\stfzifr3-1-t7va-hinh-mat-sau-0.webp" />
+    <Content Remove="wwwroot\files\images\products\z2942788864680-0761cbf0003d60174b5003b93ac8ab7d-optimized.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\files\images\account\228.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\files\images\account\bac-lon6.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\files\images\posts\1.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\files\images\products\0azlge4x.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="elFinder.NetCore" Version="1.3.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.9.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
+    <PackageReference Include="SlugGenerator" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\adassets\imglogin\apple.svg" />
+    <None Include="wwwroot\adassets\imglogin\eye.svg" />
+    <None Include="wwwroot\adassets\imglogin\facebook.svg" />
+    <None Include="wwwroot\adassets\imglogin\github.svg" />
+    <None Include="wwwroot\adassets\imglogin\hide.svg" />
+    <None Include="wwwroot\adassets\imglogin\login.svg" />
+    <None Include="wwwroot\adassets\imglogin\search.svg" />
+    <None Include="wwwroot\adassets\imglogin\signup.svg" />
+    <None Include="wwwroot\adassets\imglogin\trial.svg" />
+    <None Include="wwwroot\adassets\img\not-found.svg" />
+    <None Include="wwwroot\adassets\js\login.js" />
+    <None Include="wwwroot\adassets\js\main.js" />
+    <None Include="wwwroot\adassets\js\pages\chartist.js" />
+    <None Include="wwwroot\adassets\js\pages\chartjs.js" />
+    <None Include="wwwroot\adassets\js\pages\chat.js" />
+    <None Include="wwwroot\adassets\js\pages\dashboard-crm.js" />
+    <None Include="wwwroot\adassets\js\pages\dashboard-default.js" />
+    <None Include="wwwroot\adassets\js\pages\dashboard-e-commerce.js" />
+    <None Include="wwwroot\adassets\js\pages\dashboard-project.js" />
+    <None Include="wwwroot\adassets\js\pages\datatables.js" />
+    <None Include="wwwroot\adassets\js\pages\e-commerce-order-list.js" />
+    <None Include="wwwroot\adassets\js\pages\e-commerce-product-edit.js" />
+    <None Include="wwwroot\adassets\js\pages\file-manager.js" />
+    <None Include="wwwroot\adassets\js\pages\form-elements.js" />
+    <None Include="wwwroot\adassets\js\pages\form-validation.js" />
+    <None Include="wwwroot\adassets\js\pages\icon.js" />
+    <None Include="wwwroot\adassets\js\pages\mail.js" />
+    <None Include="wwwroot\adassets\js\pages\pricing.js" />
+    <None Include="wwwroot\adassets\js\pages\profile.js" />
+    <None Include="wwwroot\adassets\js\pages\project-list.js" />
+    <None Include="wwwroot\adassets\js\pages\slider.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\.gitignore" />
+    <None Include="wwwroot\adassets\lib\elFinder\Changelog" />
+    <None Include="wwwroot\adassets\lib\elFinder\files\.gitkeep" />
+    <None Include="wwwroot\adassets\lib\elFinder\files\.trash\.gitkeep" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\icons-big.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\tui-icon-a.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\tui-icon-b.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\tui-icon-c.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\tui-icon-d.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_box.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_dropbox.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_ftp.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_googledrive.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_local.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_network.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_onedrive.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_sql.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_trash.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\img\volume_icon_zip.svg" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\elfinder.full.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\elfinder.min.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\extras\editors.default.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\extras\editors.default.min.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\extras\quicklook.googledocs.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\extras\quicklook.googledocs.min.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ar.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.bg.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ca.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.cs.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.da.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.de.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.el.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.es.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.fa.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.fallback.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.fo.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.fr.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.fr_CA.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.he.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.hr.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.hu.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.id.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.it.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ja.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ko.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.LANG.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.nl.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.no.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.pl.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.pt_BR.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ro.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ru.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.si.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.sk.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.sl.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.sr.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.sv.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.tr.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.ug_CN.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.uk.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.vi.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.zh_CN.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\elfinder.zh_TW.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\cs.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\de.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\en.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\es.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\ja.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\ko.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\pl.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\ru.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\sk.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\i18n\help\tr.html.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\proxy\elFinderSupportVer1.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\worker\calcfilehash.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\worker\quicklook.tiff.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\js\worker\quicklook.unzip.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\LICENSE.md" />
+    <None Include="wwwroot\adassets\lib\elFinder\main.default.js" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\.tmp\.htaccess" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\autoload.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\connector.maximal.php-dist" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\connector.minimal.php-dist" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\editors\editor.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\editors\OnlineConvert\editor.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\editors\ZipArchive\editor.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\editors\ZohoOffice\editor.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinder.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderConnector.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderFlysystemGoogleDriveNetmount.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderPlugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderSession.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderSessionInterface.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeBox.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeDriver.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeDropbox.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeDropbox2.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeFTP.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeGoogleDrive.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeGroup.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeLocalFileSystem.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeMySQL.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeOneDrive.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeSFTPphpseclib.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeTrash.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\elFinderVolumeTrashMySQL.class.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\libs\GdBmp.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\mime.types" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\MySQLStorage.sql" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\AutoResize\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\AutoRotate\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\Normalizer\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\Sanitizer\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\Watermark\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\php\plugins\WinRemoveTailDots\plugin.php" />
+    <None Include="wwwroot\adassets\lib\elFinder\README.md" />
+    <None Include="wwwroot\adassets\lib\jqueryui\external\jquery\jquery.js" />
+    <None Include="wwwroot\adassets\lib\jqueryui\jquery-ui.js" />
+    <None Include="wwwroot\adassets\lib\jqueryui\jquery-ui.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\font\summernote.woff2" />
+    <None Include="wwwroot\adassets\lib\snote\jquery.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ar-AR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ar-AR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-az-AZ.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-az-AZ.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-bg-BG.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-bg-BG.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ca-ES.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ca-ES.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-cs-CZ.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-cs-CZ.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-da-DK.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-da-DK.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-de-DE.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-de-DE.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-el-GR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-el-GR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-es-ES.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-es-ES.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-es-EU.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-es-EU.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fa-IR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fa-IR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fi-FI.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fi-FI.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fr-FR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-fr-FR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-gl-ES.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-gl-ES.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-he-IL.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-he-IL.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-hr-HR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-hr-HR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-hu-HU.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-hu-HU.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-id-ID.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-id-ID.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-it-IT.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-it-IT.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ja-JP.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ja-JP.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ko-KR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ko-KR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-lt-LT.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-lt-LT.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-lt-LV.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-lt-LV.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-mn-MN.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-mn-MN.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-nb-NO.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-nb-NO.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-nl-NL.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-nl-NL.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pl-PL.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pl-PL.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pt-BR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pt-BR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pt-PT.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-pt-PT.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ro-RO.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ro-RO.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ru-RU.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ru-RU.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sk-SK.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sk-SK.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sl-SI.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sl-SI.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sr-RS-Latin.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sr-RS-Latin.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sr-RS.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sr-RS.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sv-SE.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-sv-SE.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ta-IN.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-ta-IN.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-th-TH.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-th-TH.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-tr-TR.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-tr-TR.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-uk-UA.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-uk-UA.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-uz-UZ.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-uz-UZ.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-vi-VN.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-vi-VN.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-zh-CN.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-zh-CN.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-zh-TW.js" />
+    <None Include="wwwroot\adassets\lib\snote\lang\summernote-zh-TW.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\plugin\databasic\summernote-ext-databasic.js" />
+    <None Include="wwwroot\adassets\lib\snote\plugin\hello\summernote-ext-hello.js" />
+    <None Include="wwwroot\adassets\lib\snote\plugin\specialchars\summernote-ext-specialchars.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-bs4.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-bs4.js.map" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-bs4.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-bs4.min.js.map" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-lite.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-lite.js.map" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-lite.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote-lite.min.js.map" />
+    <None Include="wwwroot\adassets\lib\snote\summernote.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote.js.map" />
+    <None Include="wwwroot\adassets\lib\snote\summernote.min.js" />
+    <None Include="wwwroot\adassets\lib\snote\summernote.min.js.map" />
+    <None Include="wwwroot\adassets\vendor\apexcharts\apexcharts.min.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\adassets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\adassets\vendor\boxicons\fonts\boxicons.svg" />
+    <None Include="wwwroot\adassets\vendor\boxicons\fonts\boxicons.woff2" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chart.esm.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chart.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chart.min.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chart.mjs" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chunks\helpers.segment.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\chunks\helpers.segment.mjs" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\img\search.83621669.svg" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\10.edbecfa9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\100.f7a12d8b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\101.15c56dbb.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\102.33b746ea.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\103.850a4486.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\104.8b4f368b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\105.1a3d6c41.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\106.d8f8b4c1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\107.38cf9b4f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\108.a30da8c9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\109.6d56b7d1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\11.b98e8151.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\110.c44e533c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\111.ccb9a835.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\112.2d2a2890.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\113.5ac0921f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\114.90ef8814.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\115.12a72d27.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\116.6b780970.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\117.79604442.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\118.7752bc89.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\119.d8e76ef0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\12.433f0c7e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\120.ed76595e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\121.cc3d56f2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\122.c8651871.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\123.f7d5f223.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\124.88ce07a4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\125.a9572036.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\126.879447b3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\127.3b8478f3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\128.87d67ad7.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\129.f6241700.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\13.b6743084.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\130.a9cb856a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\131.45e904c9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\132.abd9e4c2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\133.d5aa1db6.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\134.4bfa3b5a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\135.8c7630ad.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\136.f813e062.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\137.6cab2863.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\138.03ec5265.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\139.924812c0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\14.422fec10.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\140.a7967a5d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\141.34a018bb.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\142.c5bfcdd4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\143.05e388ba.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\144.a98bdbcc.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\145.826b73e0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\146.001afadf.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\147.fcadaef3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\148.604863a4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\149.6509ed9f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\15.09a69fc3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\150.fd8575ca.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\151.67ecd4a3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\152.481a7bd4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\153.dbf3f3aa.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\154.2aa9c67d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\155.e3367ebc.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\156.a5bb942d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\157.09caef4e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\158.1f82587f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\159.4cebd9d3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\16.0414f390.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\160.47df8215.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\161.fac79692.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\162.9f2f870f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\163.4f1604f9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\164.7f8d8643.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\165.fe2baa69.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\166.c82b3c76.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\167.3c3f2ff1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\168.8d2e8e83.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\169.b10c84bd.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\17.8dfcb176.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\170.b9db8312.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\171.2480fc36.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\172.81c5206a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\173.477dcbae.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\174.05398ca3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\175.84ab69d0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\176.f48183c3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\177.d0d35403.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\178.55d433fd.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\179.9442c138.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\18.c331029e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\180.5c15d5d4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\181.911f367b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\182.72f663e8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\183.22b2258c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\184.15b21065.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\185.894ea40b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\186.f6394459.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\187.7bd9b3fe.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\188.3baa9bcd.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\189.18e63b11.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\19.13bdd658.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\190.b7ffb54a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\191.13061aba.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\192.1bf9bd61.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\193.8fa44455.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\194.49c9a3c0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\195.eb1e8802.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\196.9b925823.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\197.adca6c8c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\198.2ae0961a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\199.cd9dca80.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\2.3e2307f3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\20.5d11c294.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\200.2eb9437f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\201.6dba10c3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\202.9c5057c6.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\203.98a3c2b8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\204.50d5cf2e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\205.e56e820b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\206.6ce5c41e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\207.8aa83d91.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\208.296ee160.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\209.13279349.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\21.7b54d7d8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\210.63e30420.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\211.0b325f23.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\212.be671e2e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\213.81d2e607.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\214.ba403b5c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\215.2efcec5f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\216.e01d3100.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\217.906c8d54.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\218.94e33827.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\219.21c5e01f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\22.c2daedd0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\220.3ba160e4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\221.5c17138c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\222.aea004ce.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\223.cbb7b883.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\224.b130b37f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\225.32f90319.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\226.8c102c21.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\227.b3d60339.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\228.72f0ad18.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\229.3daa3b7e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\23.2c668e20.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\230.7e5a85b1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\231.b83d12f1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\232.e902f42d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\233.b4f254c0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\234.d975df48.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\235.71a7be7d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\236.05d87a5e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\237.d518e28b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\238.eb60e397.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\239.81fecfed.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\24.af200d5b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\240.c0869bc2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\241.59dc896f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\242.6d423d39.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\243.a355eaa8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\244.ad729cf8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\245.c3cd6bbe.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\246.d0708528.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\247.13d65d78.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\248.1d222543.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\249.2d7a9bf1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\25.4f97f63f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\250.09ef38e2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\251.0cb90e8a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\252.2ff0def4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\253.61c7c505.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\254.20137eeb.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\255.49c937e9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\256.8d709dae.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\257.b3ebdce7.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\258.792f66d1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\259.98c809e9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\26.d1bb645c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\260.54ff10d2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\261.928afea4.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\27.2d5c4a6b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\28.72dee0f1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\29.8820be26.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\3.947b8d98.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\30.343676b8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\31.cff089f1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\32.56d8546e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\33.6b642a06.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\34.360a9ea9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\35.205d7fac.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\36.f2765bae.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\37.6c33435e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\38.a778a6a2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\39.7dda160f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\4.ee88d25a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\40.bd778eac.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\41.b79220f6.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\42.c3157beb.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\43.097368d1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\44.2515f16e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\45.d5b4b7c3.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\46.bbab8d6e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\47.79aa575e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\48.45785af9.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\49.0569a6eb.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\5.00f814ac.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\50.14bd3ba2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\51.e0968711.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\52.fe65ddf8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\53.faa1ff3f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\54.fcfed2c5.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\55.7db1d28a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\56.8b0e82b7.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\57.9de2d983.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\58.b0f8ad0c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\59.f1ff4935.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\6.2bc86161.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\60.ac08de9a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\61.ea4fad75.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\62.5c85853b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\63.5ac99656.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\64.c6838e95.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\65.4c1b089e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\66.379a6b45.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\67.15703e17.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\68.ffdefd7d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\69.bdeb7b9b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\7.74f2ce90.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\70.3dadb5ed.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\71.2c97fe38.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\72.dc778e17.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\73.d88fcb57.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\74.bba2165e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\75.15562a81.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\76.21f5a94e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\77.0725268e.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\78.d6f610d1.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\79.60d67faa.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\8.8928eb8b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\80.99d71ee0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\81.f1500469.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\82.69f363a6.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\83.f1fbcb2c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\84.b76e3156.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\85.efc4bd54.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\86.85011b24.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\87.6a88d571.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\88.0f45cfe0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\89.e67ddb59.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\9.63ebb16b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\90.96ebfa9b.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\91.cdde4d3f.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\92.dc3f06d2.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\93.aaa04d52.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\94.2af5650c.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\95.1d44ec16.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\96.9545127d.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\97.8b18f487.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\98.cb259cd0.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\99.6251650a.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\assets\js\app.7e0dc8c8.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\docs\logo.svg" />
+    <None Include="wwwroot\adassets\vendor\chart.js\helpers.esm.js" />
+    <None Include="wwwroot\adassets\vendor\chart.js\helpers.mjs" />
+    <None Include="wwwroot\adassets\vendor\echarts\echarts.min.js" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\bmap.js" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\bmap.js.map" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\bmap.min.js" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\dataTool.js" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\dataTool.js.map" />
+    <None Include="wwwroot\adassets\vendor\echarts\extension\dataTool.min.js" />
+    <None Include="wwwroot\adassets\vendor\php-email-form\validate.js" />
+    <None Include="wwwroot\adassets\vendor\quill\quill.core.js" />
+    <None Include="wwwroot\adassets\vendor\quill\quill.js" />
+    <None Include="wwwroot\adassets\vendor\quill\quill.min.js" />
+    <None Include="wwwroot\adassets\vendor\quill\quill.min.js.map" />
+    <None Include="wwwroot\adassets\vendor\remixicon\remixicon.less" />
+    <None Include="wwwroot\adassets\vendor\remixicon\remixicon.svg" />
+    <None Include="wwwroot\adassets\vendor\remixicon\remixicon.symbol.svg" />
+    <None Include="wwwroot\adassets\vendor\remixicon\remixicon.woff2" />
+    <None Include="wwwroot\adassets\vendor\simple-datatables\simple-datatables.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\CHANGELOG.md" />
+    <None Include="wwwroot\adassets\vendor\tinymce\icons\default\icons.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\icons\default\icons.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\icons\default\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\models\dom\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\models\dom\model.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\models\dom\model.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\advlist\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\advlist\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\advlist\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\anchor\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\anchor\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\anchor\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autolink\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autolink\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autolink\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autoresize\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autoresize\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autoresize\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autosave\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autosave\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\autosave\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\charmap\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\charmap\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\charmap\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\codesample\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\codesample\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\codesample\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\code\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\code\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\code\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\directionality\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\directionality\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\directionality\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\js\emojis.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\emoticons\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\fullscreen\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\fullscreen\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\fullscreen\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\help\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\help\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\help\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\image\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\image\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\image\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\importcss\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\importcss\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\importcss\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\insertdatetime\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\insertdatetime\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\link\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\link\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\link\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\lists\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\lists\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\lists\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\media\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\media\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\media\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\nonbreaking\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\nonbreaking\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\pagebreak\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\pagebreak\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\pagebreak\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\preview\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\preview\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\preview\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\quickbars\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\quickbars\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\quickbars\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\save\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\save\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\save\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\searchreplace\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\searchreplace\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\searchreplace\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\table\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\table\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\table\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\template\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\template\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\template\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualblocks\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualblocks\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualblocks\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualchars\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualchars\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\visualchars\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\wordcount\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\wordcount\plugin.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\plugins\wordcount\plugin.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\README.md" />
+    <None Include="wwwroot\adassets\vendor\tinymce\themes\silver\index.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\themes\silver\theme.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\themes\silver\theme.min.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\tinymce.js" />
+    <None Include="wwwroot\adassets\vendor\tinymce\tinymce.min.js" />
+    <None Include="wwwroot\assets\css\.DS_Store" />
+    <None Include="wwwroot\assets\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\css\responsive.css.map" />
+    <None Include="wwwroot\assets\css\ui.css.map" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\assets\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\assets\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <None Include="wwwroot\assets\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="wwwroot\assets\fonts\linearicons-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <None Include="wwwroot\assets\fonts\linearicons-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\js\main1.js" />
+    <None Include="wwwroot\assets\js\map-custom.js" />
+    <None Include="wwwroot\assets\js\slick-custom.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\assets\lib\counterup\counterup.min.js" />
+    <None Include="wwwroot\assets\lib\easing\easing.js" />
+    <None Include="wwwroot\assets\lib\easing\easing.min.js" />
+    <None Include="wwwroot\assets\lib\elFinder\files\.trash\.gitkeep" />
+    <None Include="wwwroot\assets\lib\elFinder\php\.tmp\.htaccess" />
+    <None Include="wwwroot\assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\assets\lib\owlcarousel\LICENSE" />
+    <None Include="wwwroot\assets\lib\owlcarousel\owl.carousel.js" />
+    <None Include="wwwroot\assets\lib\owlcarousel\owl.carousel.min.js" />
+    <None Include="wwwroot\assets\lib\waypoints\links.php" />
+    <None Include="wwwroot\assets\lib\waypoints\waypoints.min.js" />
+    <None Include="wwwroot\assets\lib\wow\wow.js" />
+    <None Include="wwwroot\assets\lib\wow\wow.min.js" />
+    <None Include="wwwroot\assets\vendor\animsition\js\animsition.js" />
+    <None Include="wwwroot\assets\vendor\animsition\js\animsition.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\popper.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\assets\vendor\countdowntime\countdowntime.js" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\moment.js" />
+    <None Include="wwwroot\assets\vendor\daterangepicker\moment.min.js" />
+    <None Include="wwwroot\assets\vendor\isotope\isotope.pkgd.min.js" />
+    <None Include="wwwroot\assets\vendor\jqueryui\external\jquery\jquery.js" />
+    <None Include="wwwroot\assets\vendor\jqueryui\jquery-ui.js" />
+    <None Include="wwwroot\assets\vendor\jqueryui\jquery-ui.min.js" />
+    <None Include="wwwroot\assets\vendor\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox-plus-jquery.js" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox-plus-jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox-plus-jquery.min.map" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox.js" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox.min.js" />
+    <None Include="wwwroot\assets\vendor\lightbox2\js\lightbox.min.map" />
+    <None Include="wwwroot\assets\vendor\MagnificPopup\jquery.magnific-popup.js" />
+    <None Include="wwwroot\assets\vendor\MagnificPopup\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\assets\vendor\parallax100\parallax100.js" />
+    <None Include="wwwroot\assets\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\assets\vendor\select2\select2.js" />
+    <None Include="wwwroot\assets\vendor\select2\select2.min.js" />
+    <None Include="wwwroot\assets\vendor\slick\config.rb" />
+    <None Include="wwwroot\assets\vendor\slick\fonts\slick.svg" />
+    <None Include="wwwroot\assets\vendor\slick\slick-theme.less" />
+    <None Include="wwwroot\assets\vendor\slick\slick-theme.scss" />
+    <None Include="wwwroot\assets\vendor\slick\slick.js" />
+    <None Include="wwwroot\assets\vendor\slick\slick.less" />
+    <None Include="wwwroot\assets\vendor\slick\slick.min.js" />
+    <None Include="wwwroot\assets\vendor\slick\slick.scss" />
+    <None Include="wwwroot\assets\vendor\sweetalert\sweetalert.min.js" />
+    <None Include="wwwroot\files\images\background\customer_bg.webp" />
+    <None Include="wwwroot\files\images\products\1-32c28533-6584-485d-8aa6-724fd71da575.webp" />
+    <None Include="wwwroot\files\images\products\1e9d5446-7b37-4b0a-a275-dc1c648a6972.webp" />
+    <None Include="wwwroot\files\images\products\2-05d45d20-451e-48c7-9513-852dc4a063f6.webp" />
+    <None Include="wwwroot\files\images\products\2014ffe2-a5d3-4ccb-a660-a0a3e4384138.webp" />
+    <None Include="wwwroot\files\images\products\4ccb-a660-a0a3e4384138.webp" />
+    <None Include="wwwroot\files\images\products\71-copy.webp" />
+    <None Include="wwwroot\files\images\products\782s7jmg-1-ct5t-hinh-mat-truoc-0.webp" />
+    <None Include="wwwroot\files\images\products\78b0c9e6-f805-4422-9a5a-fbb9f8c879b0.webp" />
+    <None Include="wwwroot\files\images\products\7c740972-8b7c-4b4a-a331-522826468556.webp" />
+    <None Include="wwwroot\files\images\products\897b53bbcbf83a9f3bf07214fcdeb93d.webp" />
+    <None Include="wwwroot\files\images\products\8aa6-724fd71da575.webp" />
+    <None Include="wwwroot\files\images\products\8ab6dc5708ddc88391cc.webp" />
+    <None Include="wwwroot\files\images\products\8f87ee42-de22-415d-a5a2-0a67b59899fb.webp" />
+    <None Include="wwwroot\files\images\products\97ed-bf70bd2c954c.webp" />
+    <None Include="wwwroot\files\images\products\9c425ca0-96da-4ec6-b638-b09bc3e09768 (1).webp" />
+    <None Include="wwwroot\files\images\products\9c425ca0-96da-4ec6-b638-b09bc3e09768.webp" />
+    <None Include="wwwroot\files\images\products\b16b-47c7-bac4-46e96ce1e728.webp" />
+    <None Include="wwwroot\files\images\products\b8a822d8-8731-490b-9d32-5f08ffa8663d.webp" />
+    <None Include="wwwroot\files\images\products\bang-size-varsity.webp" />
+    <None Include="wwwroot\files\images\products\e6dd2381a541641f3d50-jpeg.webp" />
+    <None Include="wwwroot\files\images\products\f2ff1c0b-7e40-4bd3-97ba-7253fecce5e5-64eb45b7-b16b-47c7-bac4-46e96ce1e728.webp" />
+    <None Include="wwwroot\files\images\products\f7512451-c825-488d-842d-260811159018.webp" />
+    <None Include="wwwroot\files\images\products\jhpwu5y2-1-psm9-hinh-mat-sau-0-jpeg.webp" />
+    <None Include="wwwroot\files\images\products\jhpwu5y2-1-psm9-hinh-mat-truoc-0-jpeg.webp" />
+    <None Include="wwwroot\files\images\products\mat-truoc-0-jpeg.webp" />
+    <None Include="wwwroot\files\images\products\neutron-chute-bomber.webp" />
+    <None Include="wwwroot\files\images\products\rev-bl1.webp" />
+    <None Include="wwwroot\files\images\products\stfzifr3-1-t7va-hinh-mat-sau-0.webp" />
+    <None Include="wwwroot\files\images\products\z2942788864680-0761cbf0003d60174b5003b93ac8ab7d-optimized.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\files\images\about\about-01.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\about\about-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\Default-avatar.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\default.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\ho-anh-hoa1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\ho-anh-hoa2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\ho-anh-hoa3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\ho-anh-hoaa8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\nguyen-huu-nhat28.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\no-name44.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\account\ton-ngo-khong6.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\background\bg-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\background\bg-about.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\background\bg.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\background\bg_blog.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\aa.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\bag.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\basictee.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\bb.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\bb.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\bbb.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\bomber.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\cong-nghe.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\default.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\giao-duc.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\nhat34.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\categories\shirt.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-01.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-03.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-04.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-05.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-06.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-07.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-08.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\gallery\gallery-09.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\favicon.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-close.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-close2.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-email.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-heart-01.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-heart-02.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-next.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-pay-01.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-pay-02.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-pay-03.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-pay-04.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-pay-05.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\icon-prev.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\logo-01.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\logo-02.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\pin.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-5.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-6.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-8.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\icons\vendor-9.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\.DS_Store">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\aaaaaaaaa.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\Ao-hoodie-quan-bermuda-cho-ban-thoa-suc-sang-tao.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\Balo-Local-Brand-REGODS-CLUB.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-01.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-03.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-04.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-05.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\blog-06.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\cach-chon-mau-tui-deo-cheo-phu-hop-voi-quan-ao7.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\Co-cau-vong-luc-sac-Bieu-tuong-dep-cua-cong-dong-LGBT.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\default.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\ggg0.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\oppofindn2_3_1280x720-300x200.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\Quan-ong-suong-lich-lam-cuc-ki-de-phoi-do.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\te0.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\top-cac-mau-quan-local-brand-duoc-gioi-tre-ua-chuong-nhat.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\tstss0.jpeg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\Tui-deo-cheo-mau-nau-co-dien.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\unisex-suc-hut-cua-phong-cach-thoi-trang-phi-gioi-tinh.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\posts\xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\02503ba2-a821-4058-955b-b875ac6cd985-055306fa-6dbe-4cbb-ab7c-a2bf8ec351c0.webp">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\415d-a5a2-0a67b59899fb.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\41obwoon.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\4yjce3fr.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\72-copy.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\782s7jmg-1-ct5t-hinh-chi-tiet-goc-do-khac-0.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\782s7jmg-1-ct5t-hinh-mat-sau-0.webp">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\782s7jmg-1-ct5t-hinh-mat-truoc-0.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\8ab6dc5708ddc88391cc.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\ab033541-17b5-4877-86f2-7210a8806665-956d61f5-ed40-4a23-be2e-e8c95cae9778.webp">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\ao-thun-paradox-flying-fairy-tee.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\bang-size-varsity.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\cc0c1c47-a87a-4a8a-a19f-2e320c96f87e.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\dad32e19-0c71-4495-97ed-bf70bd2c954c.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\default.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\dong-ho.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\dong-ho0.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\f33f7ddea954690a3045.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\g3zvvfgz.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\gp5nbelg.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\hggfvu1z.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\m4w2z0bz.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\meubaxrw.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\mqgni3lz.webp">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\ph5bumag.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-01.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-03.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-04.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-05.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-06.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-07.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-08.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-09.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-10.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-11.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-12.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-13.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-14.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-15.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\product-16.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\r2gfdlog.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\r34myljf.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\s21jbjxy.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\test.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\z2546025145913-fd6e0a25a7d59cd00e937c2aa2e986cc-optimized.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\products\z2662962648071-897b53bbcbf83a9f3bf07214fcdeb93d.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\1.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\2.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\4.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\aaaaaaaaa.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\Ao-hoodie-quan-bermuda-cho-ban-thoa-suc-sang-tao.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\Balo-Local-Brand-REGODS-CLUB.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-01.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-02.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-03.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-04.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-05.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\blog-06.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\Co-cau-vong-luc-sac-Bieu-tuong-dep-cua-cong-dong-LGBT.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\lam-the-nao-de-phoi-do-local-brand-xin-nhu-phong-cach-unisex.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\oppofindn2_3_1280x720-300x200.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\Quan-ong-suong-lich-lam-cuc-ki-de-phoi-do.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\Tui-deo-cheo-mau-nau-co-dien.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\files\images\test\xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="wwwroot\files\.tmb\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\adassets\vendor\tinymce\tinymce.d.ts" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,343 @@
+﻿@using eCozaStore.Models;
+@using PagedList.Core.Mvc;
+
+@model PagedList.Core.IPagedList<ViewComment>
+
+
+<!--Danh sách bình luận-->
+<div class="p-t-40 wow fadeInUp" data-wow-delay="0.1s">
+
+    <h3 class="mtext-103 cl2 p-b-12">
+        @ViewBag.sComment Bình luận
+    </h3>
+
+    @foreach (var item in Model.Where(m => m.ParentId == 0))
+    {
+        DateTime dateNow = DateTime.Now;
+
+        var CmtID = item.CommentId;
+        var dsSubCmt = Model.Where(m => m.ParentId == CmtID);
+
+        @if(dsSubCmt.Count() > 0){
+            <div class="p-t-16 m-b-20" style="border-top: 1px solid rgba(0, 0, 0, 0.2);">
+                <div class="flex-w">
+                    <div class="wrap-item-gallery m-b-10" style="width: 6.3rem; height: 6.3rem;">
+                        @if (item.CustomerId == 0)
+                        {
+                            <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@item.Thumb'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                        }
+                        else
+                        {
+                            <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@item.Avatar'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                        }
+                    </div>
+
+                    <div class="p-l-18" style="width: 80%">
+                        <h5 class="stext-115 p-b-5 ">
+                            @if (item.CustomerId == 0)
+                            {
+                                <span>@item.Author |</span>
+                            }
+                            else
+                            {
+                                <span>@item.FullName |</span>
+                            }
+
+                            @if (item.CreatedDate == null)
+                            {
+                                <span style="font-weight: 400;"> Thời gian chưa xác định !</span>
+                            }
+                            else if (item.CreatedDate.Value.Date == dateNow.Date)
+                            {
+                                if ((item.CreatedDate.Value.Hour == dateNow.Hour) && (item.CreatedDate.Value.Minute == dateNow.Minute))
+                                {
+                                    int sec = dateNow.Second - item.CreatedDate.Value.Second;
+                                    <span style="font-weight: 400;">
+                                        @sec giây trước
+                                    </span>
+                                }
+                                else if (item.CreatedDate.Value.Hour == dateNow.Hour)
+                                {
+                                    int min = dateNow.Minute - item.CreatedDate.Value.Minute;
+                                    <span style="font-weight: 400;">
+                                        @min phút trước
+                                    </span>
+                                }
+                                else
+                                {
+                                    int hour = dateNow.Hour - item.CreatedDate.Value.Hour;
+                                    <span style="font-weight: 400;">
+                                        @hour giờ trước
+                                    </span>
+                                }
+                            }
+                            else
+                            {
+                                <span style="font-weight: 400;"> @item.CreatedDate.Value.ToString("dd/MM/yyyy") </span>
+                            }
+                        </h5>
+                        <p class="stext-107 p-b-10">
+                            @item.Content
+                        </p>
+
+
+                        @if (item.Slike == null)
+                        {
+                            <a href="#" class="stext-103 p-b-10 hov-cl1 trans-04" style="margin-right: 28px; font-size: 12px;">
+                                <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i>
+                                Thích (0)
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="#" class="stext-103 p-b-10 hov-cl1 trans-04" style="margin-right: 28px; font-size: 12px;">
+                                <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i>
+                                Thích (@item.Slike)
+                            </a>
+                        }
+
+                        <a class="stext-103 p-b-10 hov-cl1 trans-04 js-show-filter" style="margin-right: 28px; font-size: 12px; cursor: pointer">
+                            <i class="fa-solid fa-reply" aria-hidden="true"></i>
+                            Trả lời
+                        </a>
+
+                        <!-- Rep cmt -->
+                        <div class="dis-none panel-filter w-full p-t-10">
+                            <div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm" style="padding: 28px; border-radius: 10px;">
+                                <form asp-action="RepComment" asp-controller="Home" method="post" enctype="multipart/form-data" style="width: 100%">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <input type="hidden" name="PostId" value="@ViewBag.postID" />
+                                    <input type="hidden" name="ParentId" value="@item.CommentId" />
+
+                                    @if (ViewBag.IsLogin == false)
+                                    {
+                                        <div class="bor19 size-218 m-b-20" style="border-radius: 10px;">
+                                            <input name="Author" type="text" class="stext-111 cl2 plh3 size-116 p-lr-18" autocomplete="off" placeholder="Họ tên..." style="border-radius: 10px;" />
+                                        </div>
+
+                                        <div class="bor19 m-b-20" style="border-radius: 10px;">
+                                            <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px;"></textarea>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="flex-m m-b-30">
+                                            <div class="wrap-item-gallery m-r-32" style="width: 6.3rem; height: 5.3rem;">
+                                                <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@User.FindFirst("Avt").Value'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                                            </div>
+                                            <div class="bor19" style="border-radius: 10px; width: 83%">
+                                                <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px; min-height: 80px;"></textarea>
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04">
+                                        Gửi
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @foreach(var itemm in dsSubCmt)
+                {
+                    <div class="flex-w" style="align-items: center; justify-content: end; padding-top: 20px;">
+                        <div class="wrap-item-gallery m-b-10" style="width: 4.5rem; height:4.5rem;">
+                            @if (itemm.CustomerId == 0)
+                            {
+                                <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@itemm.Thumb'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                            }
+                            else
+                            {
+                                <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@itemm.Avatar'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                            }
+                        </div>
+
+                        <div class="p-l-18" style="width: 80%">
+                            <h5 class="stext-115 p-b-5 ">
+                                @if (itemm.CustomerId == 0)
+                                {
+                                    <span>@itemm.Author |</span>
+                                }
+                                else
+                                {
+                                    <span>@itemm.FullName |</span>
+                                }
+
+                                @if (itemm.CreatedDate == null)
+                                {
+                                    <span style="font-weight: 400;"> Thời gian chưa xác định !</span>
+                                }
+                                else if (itemm.CreatedDate.Value.Date == dateNow.Date)
+                                {
+                                    if ((itemm.CreatedDate.Value.Hour == dateNow.Hour) && (itemm.CreatedDate.Value.Minute == dateNow.Minute))
+                                    {
+                                        int sec = dateNow.Second - itemm.CreatedDate.Value.Second;
+                                        <span style="font-weight: 400;">
+                                            @sec giây trước
+                                        </span>
+                                    }
+                                    else if (itemm.CreatedDate.Value.Hour == dateNow.Hour)
+                                    {
+                                        int min = dateNow.Minute - itemm.CreatedDate.Value.Minute;
+                                        <span style="font-weight: 400;">
+                                            @min phút trước
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        int hour = dateNow.Hour - itemm.CreatedDate.Value.Hour;
+                                        <span style="font-weight: 400;">
+                                            @hour giờ trước
+                                        </span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span style="font-weight: 400;"> @itemm.CreatedDate.Value.ToString("dd/MM/yyyy") </span>
+                                }
+                            </h5>
+                            <p class="stext-107 p-b-10">
+                                @itemm.Content
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else{
+            <div class="p-t-16 m-b-20" style="border-top: 1px solid rgba(0, 0, 0, 0.2);">
+                <div class="flex-w">
+                    <div class="wrap-item-gallery m-b-10" style="width: 6.3rem; height: 6.3rem;">
+                        @if (item.CustomerId == 0)
+                        {
+                            <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@item.Thumb'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                        }
+                        else
+                        {
+                            <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@item.Avatar'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                        }
+                    </div>
+
+                    <div class="p-l-18" style="width: 80%">
+                        <h5 class="stext-115 p-b-5 ">
+                            @if (item.CustomerId == 0)
+                            {
+                                <span>@item.Author |</span>
+                            }
+                            else
+                            {
+                                <span>@item.FullName |</span>
+                            }
+
+                            @if (item.CreatedDate == null)
+                            {
+                                <span style="font-weight: 400;"> Thời gian chưa xác định !</span>
+                            }
+                            else if (item.CreatedDate.Value.Date == dateNow.Date)
+                            {
+                                if ((item.CreatedDate.Value.Hour == dateNow.Hour) && (item.CreatedDate.Value.Minute == dateNow.Minute))
+                                {
+                                    int sec = dateNow.Second - item.CreatedDate.Value.Second;
+                                    <span style="font-weight: 400;">
+                                        @sec giây trước
+                                    </span>
+                                }
+                                else if (item.CreatedDate.Value.Hour == dateNow.Hour)
+                                {
+                                    int min = dateNow.Minute - item.CreatedDate.Value.Minute;
+                                    <span style="font-weight: 400;">
+                                        @min phút trước
+                                    </span>
+                                }
+                                else
+                                {
+                                    int hour = dateNow.Hour - item.CreatedDate.Value.Hour;
+                                    <span style="font-weight: 400;">
+                                        @hour giờ trước
+                                    </span>
+                                }
+                            }
+                            else
+                            {
+                                <span style="font-weight: 400;"> @item.CreatedDate.Value.ToString("dd/MM/yyyy") </span>
+                            }
+                        </h5>
+                        <p class="stext-107 p-b-10">
+                            @item.Content
+                        </p>
+
+
+                        @if (item.Slike == null)
+                        {
+                            <a href="#" class="stext-103 p-b-10 hov-cl1 trans-04" style="margin-right: 28px; font-size: 12px;">
+                                <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i>
+                                Thích (0)
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="#" class="stext-103 p-b-10 hov-cl1 trans-04" style="margin-right: 28px; font-size: 12px;">
+                                <i class="fa-solid fa-thumbs-up" aria-hidden="true"></i>
+                                Thích (@item.Slike)
+                            </a>
+                        }
+
+                        <a class="stext-103 p-b-10 hov-cl1 trans-04 js-show-filter" style="margin-right: 28px; font-size: 12px; cursor: pointer">
+                            <i class="fa-solid fa-reply" aria-hidden="true"></i>
+                            Trả lời
+                        </a>
+
+                        <!-- Rep cmt -->
+                        <div class="dis-none panel-filter w-full p-t-10">
+                            <div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm" style="padding: 28px; border-radius: 10px;">
+                                <form asp-action="RepComment" asp-controller="Home" method="post" enctype="multipart/form-data" style="width: 100%">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <input type="hidden" name="PostId" value="@ViewBag.postID" />
+                                    <input type="hidden" name="ParentId" value="@item.CommentId" />
+
+                                    @if (ViewBag.IsLogin == false)
+                                    {
+                                        <div class="bor19 size-218 m-b-20" style="border-radius: 10px;">
+                                            <input name="Author" type="text" class="stext-111 cl2 plh3 size-116 p-lr-18" autocomplete="off" placeholder="Họ tên..." style="border-radius: 10px;" />
+                                        </div>
+
+                                        <div class="bor19 m-b-20" style="border-radius: 10px;">
+                                            <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px;"></textarea>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="flex-m m-b-30">
+                                            <div class="wrap-item-gallery m-r-32" style="width: 6.3rem; height: 6.3rem;">
+                                                <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@item.Avatar'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                                            </div>
+                                            <div class="bor19" style="border-radius: 10px; width: 83%">
+                                                <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px; min-height: 80px;"></textarea>
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04">
+                                        Gửi
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+    <!-- Pagination -->
+    <div class="flex-l-m flex-w w-full p-t-10 m-lr--7" style="justify-content: center">
+        <br />
+        <nav aria-label="Page navigation example">
+            <pager class="pager-container" list="@Model" asp-controller="Home" asp-action="BlogDetail" options="@PagedListRenderOptions.PageNumbersPlusPrevAndNext" />
+        </nav>
+    </div>
+</div>

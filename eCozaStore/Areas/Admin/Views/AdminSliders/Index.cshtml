@@ -1,0 +1,125 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<eCozaStore.Models.TblSlider>
+
+@{
+
+    ViewData["Title"] = "Danh sách slider";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagetitle">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Danh sách sản phẩm : Trang @ViewBag.CurrentPage</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body" style="padding: 50px ;">
+                    <div class="table-responsive">
+
+                        <div class="row m-b-30" style="align-items: center; margin-bottom: 30px !important;">
+                            <div class="col-md-8">
+                               
+                            </div>
+
+                            <div class="col-md-4" style="text-align: right !important;">
+                                <a class="btn btn-primary" asp-area="Admin" asp-controller="AdminSliders" asp-action="Create">
+                                    <i class="anticon anticon-plus-circle m-r-5"></i>
+                                    <span>Thêm slider</span>
+                                </a>
+                            </div>
+                        </div>
+                        <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1rem !important;">ID</th>
+                                    <th style="padding: 1rem !important;">Tiêu đề</th>
+                                    <th style="padding: 1rem !important;">Hình ảnh</th>
+                                    <th style="padding: 1rem !important;">Vị trí</th>
+                                    <th style="padding: 1rem !important;">Thứ tự</th>
+                                    <th style="padding: 1rem !important;">Trạng thái</th>
+                                    <th style="padding: 1rem !important;">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="records_table" style="vertical-align:-webkit-baseline-middle !important;">
+                                @if(Model != null)
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.SliderId</td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                <a asp-area="Admin" asp-controller="AdminSliders" asp-action="Details" asp-route-id="@item.SliderId">@item.Title</a>
+                                            </td>
+   
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important; max-width: 200px;">
+                                                @if(item.Images != null) {
+                                                    <img width="50%" height="auto" src="@item.Images" alt="@item.Title" />
+                                                }else {
+                                                    <img width="50%" height="auto" src="~/files/images/slider/default.jpg" alt="@item.Title"/>
+                                                }
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                                                @item.Position
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                                                @item.SliderOrder
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if (item.IsActive)
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="@item.IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="IsActive" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="@item.IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="IsActive" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                            </td>
+
+                                            <td style="min-width: 150px !important;">
+
+                                                <a class="btn btn-primary btn-sm" title="Chi tiết" asp-area="Admin" asp-controller="AdminSliders" asp-action="Details" asp-route-id="@item.SliderId"><i class="ri-eye-line"></i></a>
+                                                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminSliders" asp-action="Edit" asp-route-id="@item.SliderId"><i class="ri-edit-2-line"></i></a>
+                                                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminSliders" asp-action="Delete" asp-route-id="@item.SliderId"><i class="bi bi-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                
+
+
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+
+                            @if(Model.PageCount > 1) {
+                                <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminSliders" asp-action="Index" options="PagedListRenderOptions.Bootstrap4PageNumbersOnly" />
+                            }
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+

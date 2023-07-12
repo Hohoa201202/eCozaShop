@@ -1,0 +1,49 @@
+﻿@model List<TblCategory>
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+
+
+        <tr>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.CategoryId</td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                <a href="#">@item.CategoryName</a>
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.ParentId
+
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                @item.CategoryOrder
+            </td>
+
+
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @if (item.IsActive)
+                {
+                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                        <input asp-for="@item.IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                        <label for="Active" class="form-check-label">True</label>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                        <input asp-for="@item.IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                        <label for="Active" class="form-check-label">False</label>
+                    </div>
+                }
+            </td>
+
+            <td style="min-width: 150px !important;">
+                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminCategories" asp-action="Details" asp-route-categoryID="@item.CategoryId"><i class="ri-eye-line"></i></a>
+                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminCategories" asp-action="Edit" asp-route-categoryID="@item.CategoryId"><i class="ri-edit-2-line"></i></a>
+                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminCategories" asp-action="Delete" asp-route-categoryID="@item.CategoryId"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+    }
+}

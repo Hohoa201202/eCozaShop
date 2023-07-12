@@ -1,0 +1,155 @@
+﻿@model eCozaStore.Models.TblCustomer;
+
+@{
+    ViewData["Title"] = "Cá nhân";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="p-d-desktop">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+            <a asp-controller="Home" asp-action="Index" class="stext-109 cl8 hov-cl1 trans-04">
+                Home
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+
+            <a href="" class="stext-109 cl8 hov-cl1 trans-04">
+                Quản lý hồ sơ
+            </a>
+        </div>
+    </div>
+
+    <div class="container p-t-65">
+        <div class="row">
+
+            <div class="col-sm-10 col-lg-7 col-xl-3 m-lr-auto m-b-50 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bor10 p-lr-40 p-t-30 p-b-30 m-l-63 m-lr-0-xl p-lr-15-sm" style="margin-left: 24px; box-shadow: 0px 0px 4px rgb(0 0 0 / 22%); border-radius: 10px;">
+                    <ul class="sidebar-link w-full" style="padding: 0;">
+                        <li class="p-b-11 p-t-11 section-title section-title-sm position-relative">
+                            <a href="#" class="stext-102 cl2 hov-cl1 trans-04 section-title section-title-sm" style="color: #007bff;">
+                                <i class="fa-solid fa-user  m-r-10" aria-hidden="true"></i>
+                                Quản lý hồ sơ
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="ViewOrder" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-square-check  m-r-10" aria-hidden="true"></i>
+                                Quản lý đơn hàng
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="MyAddress" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-location-dot  m-r-10" aria-hidden="true"></i>
+                                Quản lý địa chỉ
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="ChangePass" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-lock  m-r-10" aria-hidden="true"></i>
+                                Đổi mật khẩu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10 col-xl-9 m-lr-auto m-b-50 wow fadeInUp" data-wow-delay="0.1s">
+
+                <div class="m-l-25 m-lr-0-xl m-b-38 table-border-boxshadow" style="box-shadow: 0px 0px 4px rgb(0 0 0 / 22%); padding: 28px; border-radius: 10px;">
+
+                    <div style="text-align: center; font-size: 20px;">HỒ SƠ CỦA TÔI</div>
+                    <div class="m-t-4" style="text-align: center; font-size: 15px;">Quản lý thông tin hồ sơ để bảo mật tài khoản</div>
+
+                    <form asp-controller="MyAccount" asp-action="Index" method="post" enctype="multipart/form-data" style="margin-top: 28px;">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="CustomerId" />
+                        <input type="hidden" asp-for="Password" />
+                        <input type="hidden" asp-for="Avatar" />
+                        <input type="hidden" asp-for="CreatedDate" />
+                        <input type="hidden" asp-for="LastLogin" />
+                        <input type="hidden" asp-for="Active" />
+                        <input type="hidden" asp-for="Description" />
+
+                        <div class="row">
+                            <div class="col-lg-10 col-xl-8 m-lr-auto">
+                                <div class="flex-m form-group">
+                                    <label style="margin: 0 28px 0  0; width:20%; text-align: right;">Họ tên</label>
+                                    <div class="" style="width: 80%">
+                                        <input asp-for="FullName" type="text" class="form-control" placeholder="Nhập nội dung..." autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="flex-m form-group">
+                                    <label style="margin: 0 28px 0  0; width:20% ; text-align: right;">Email</label>
+                                    <div class="" style="width: 80%">
+                                        <input asp-for="Email" type="text" class="form-control" placeholder="Nhập nội dung..." autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="flex-m form-group">
+                                    <label style="margin: 0 28px 0  0; width:20% ; text-align: right;">Số điện thoại</label>
+                                    <div class="" style="width: 80%">
+                                        <input asp-for="Phone" type="text" class="form-control" placeholder="Nhập nội dung..." autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="flex-m form-group">
+                                    <label style="margin: 0 28px 0  0; width:20% ; text-align: right;">Địa chỉ</label>
+                                    <div class="" style="width: 80%">
+                                        <input asp-for="Address" type="text" class="form-control" placeholder="Nhập nội dung..." autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="flex-m form-group">
+                                    <label style="margin: 0 28px 0  0; width:20% ; text-align: right;">Ngày sinh</label>
+                                    <div class="" style="width: 80%">
+                                        <input asp-for="Birthday" class="form-control" placeholder="Nhập nội dung..." autocomplete="off">
+                                    </div>
+                                </div>
+
+                                <div class="flex-m form-group" style="margin: 0">
+                                    <label style="margin: 0 28px 0  0; width:20% ; text-align: right;"></label>
+                                    <div class="" style="width: 80%">
+                                        <div class="text-danger">@ViewBag.Err</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-10 col-lg-7 col-xl-4 m-lr-auto">
+                                <div class="flex-m" style="justify-content: center;">
+                                    <div class="flex-m" style="flex-direction: column; align-items: center;">
+                                        <div class="m-b-20" style="height: 8.25rem; width: 8.25rem;">
+                                            @if(Model.Avatar != null ){
+                                                <img id="img-account" src="./files/images/account/@Model.Avatar" style="box-shadow: 0 2px 10px #0123 ;border-radius: 50%; width: 100%;height: 100%; background-position: 50%;background-size: cover;background-repeat: no-repeat;cursor: pointer;">
+                                                </img>
+                                            }
+                                            else{
+                                                <img id="img-account" src="./files/images/account/default.jpg" style="box-shadow: 0 2px 10px #0123 ;border-radius: 50%; width: 100%;height: 100%; background-position: 50%;background-size: cover;background-repeat: no-repeat;cursor: pointer;">
+                                                </img>
+                                            }
+                                        </div>
+                                        <input asp-for="Avatar" placeholder="Chọn ảnh" name="fThumb" type="file" onchange="document.getElementById('img-account').src = window.URL.createObjectURL(this.files[0])" class="form-control" style="height: 36px; width:80px ;font-weight: 300 ;font-size: 14px; outline: 0; color: #555; border: 1px solid rgba(0,0,0,.09); box-shadow: 0 1px 1px 0 rgb(0 0 0 / 3%);" />
+                                        <span asp-validation-for="Avatar" class="text-danger"></span>
+                                        <div class="m-t-12" style="color: #999; font-size: 14px">
+                                            <p>Dụng lượng file tối đa 1 MB</p>
+                                            <p>Định dạng:.JPEG, .PNG</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 m-t-18">
+                            <div class="col-sm-12">
+                                <input type="submit" value="Lưu" class="btn btn-primary" style="font-weight: 400; border-radius: 50px; min-width: 100px;" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

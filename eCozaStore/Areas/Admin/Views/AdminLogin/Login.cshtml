@@ -1,0 +1,90 @@
+﻿@model eCozaStore.Areas.Admin.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Đăng nhập hệ thống quản trị";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutLogin.cshtml";
+}
+<div class="user login">
+    <div class="img-box">
+        <img src="~/adassets/imglogin/login.svg" alt="" />
+    </div>
+    <div class="form-box">
+        <div class="top">
+            @*<p>
+                Not a member?
+                <span data-id="#ff0066">Register now</span>
+            </p>*@
+        </div>
+        <form asp-area="Admin" asp-controller="AdminLogin" asp-action="Login" method="post">
+            <div class="form-control">
+                <h2>ECOZA STORE</h2>
+                <p>Hệ thống quản trị thông minh</p>
+                <input type="email" name="Email" placeholder="Nhập Email..." asp-for="Email" />
+                <div>
+                    <input type="password" name="Password" placeholder="Nhập mật khẩu..." asp-for="Password" />
+                    <div class="icon form-icon">
+                        <!-- <img src="~/adassets/imglogin/eye.svg" alt="" /> -->
+                    </div>
+                </div>
+                <span><a href="#">Quên mật khẩu</a></span>
+                <span style="text-align: center !important; color: red;">@ViewBag.Error</span>
+                <input type="Submit" value="Đăng nhập" />
+            </div>
+          
+
+
+        </form>
+    </div>
+</div>
+
+@*<!-- Register -->
+<div class="user signup">
+    <div class="form-box">
+        <div class="top">
+            <p>
+                Already a member?
+                <span data-id="#1a1aff">Login now</span>
+            </p>
+        </div>
+        <form action="">
+            <div class="form-control">
+                <h2>Welcome Codevo!</h2>
+                <p>It's good to have you.</p>
+                <input type="email" placeholder="Enter Email" />
+                <div>
+                    <input type="password" placeholder="Password" />
+                    <div class="icon form-icon">
+                        <img src="~/adassets/imglogin/eye.svg" alt="" />
+                    </div>
+                </div>
+                <div>
+                    <input type="password" placeholder="Confirm Password" />
+                    <div class="icon form-icon">
+                        <img src="~/adassets/imglogin/eye.svg" alt="" />
+                    </div>
+                </div>
+                <input type="Submit" value="Register" />
+            </div>
+            <div class="form-control">
+                <p>Or continue with</p>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="~/adassets/imglogin/search.svg" alt="" />
+                    </div>
+                    <div class="icon">
+                        <img src="~/adassets/imglogin/apple.svg" alt="" />
+                    </div>
+                    <div class="icon">
+                        <img src="~/adassets/imglogin/facebook.svg" alt="" />
+                    </div>
+                    <div class="icon">
+                        <img src="~/adassets/imglogin/github.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="img-box">
+        <img src="~/adassets/imglogin/trial.svg" alt="" />
+    </div>
+</div>
+*@

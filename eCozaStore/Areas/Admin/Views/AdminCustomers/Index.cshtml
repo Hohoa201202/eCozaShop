@@ -1,0 +1,138 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<eCozaStore.Models.TblCustomer>
+
+@{
+    ViewData["Title"] = "Danh sách khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagetitle">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Danh sách khách hàng : Trang @ViewBag.CurrentPage</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body" style="padding: 50px ;">
+                    <div class="row m-b-30" style="align-items: center; margin-bottom: 30px !important;">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+
+                                    <div class="input-affix m-v-10">
+
+                                        <input id="keyword" name="keyword" type="text" class="form-control"
+                                               placeholder="Tìm kiếm khách hàng">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected="" disabled="">Trạng thái</option>
+                                        <option value="All">Chọn tất cả</option>
+
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1rem !important;">ID</th>
+                                    <th style="padding: 1rem !important;">Họ và tên</th>
+                                    <th style="padding: 1rem !important;">Số điện thoại</th>
+                                    <th style="padding: 1rem !important;">Email</th>
+                                    <th style="padding: 1rem !important;">Địa chỉ</th>
+                                    <th style="padding: 1rem !important;">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="records_table" style="vertical-align:-webkit-baseline-middle !important;">
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.CustomerId</td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                <a href="#">@item.FullName</a>
+                                            </td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @item.Phone
+                                            </td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                                                @item.Email
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @item.Address
+                                            </td>
+
+
+                                            <td style="min-width: 150px !important;">
+                                                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Details" asp-route-customerID="@item.CustomerId"><i class="ri-eye-line"></i></a>
+                                                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminCustomers" asp-action="hideCustomers" asp-route-id="@item.CustomerId"><i class="bi bi-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+
+                            @if(Model.PageCount > 1) {
+                                <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index" options="PagedListRenderOptions.Bootstrap4PageNumbersOnly" />
+
+                            }
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Tìm kiếm Danh sách khách hàng
+        $("#keyword").keyup(function () {
+            var strkeyword = $('#keyword').val();
+            $.ajax({
+                url: '/Admin/Search/FindCustomers/',
+                datatype: "json",
+                type: "POST",
+                data: { keyword: strkeyword },
+                async: true,
+                success: function (results) {
+                    $("#records_table").html("");
+                    $("#records_table").html(results);
+                },
+                error: function (xhr) {
+                    alert('error');
+                }
+            });
+        });
+    </script>
+}

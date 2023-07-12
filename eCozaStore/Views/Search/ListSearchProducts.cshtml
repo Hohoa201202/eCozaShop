@@ -1,0 +1,48 @@
+﻿@using eCozaStore.Utilities;
+
+@model IList<TblProduct>
+
+
+    @if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+
+        String Url = Functions.TitleSlugGeneration("product", item.ProductName, item.ProductId);
+
+        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+            <!-- Block2 -->
+            <div class="block2">
+                <div class="block2-pic hov-img0">
+                    <img src="@item.Thumb" alt="IMG-PRODUCT">
+                    @if (item.Discount != 0)
+                    {
+                        <a style="border-radius: 50px;" class="position-absolute top-0 start-0 bg-hot text-white  mt-5 py-2 px-4" href="">@item.Discount%</a>
+                    }
+                    <a href="/@Url" class=" block2-btn btn-box-shadow flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 xxxjs-show-modal1">
+                        Xem ngay
+                    </a>
+                </div>
+
+                <div class="block2-txt flex-w flex-t p-t-14">
+                    <div class="block2-txt-child1 flex-col-l ">
+                        <a href="/@Url" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                            @item.ProductName
+                        </a>
+
+                        <span class="stext-105 cl3">
+                            @String.Format("{0:0,00}", item.Price) đ
+                        </span>
+                    </div>
+
+                    <div class="block2-txt-child2 flex-r p-t-3">
+                        <a class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                            <img class="icon-heart1 dis-block trans-04" src="../files/images/icons/icon-heart-01.png" alt="ICON">
+                            <img class="icon-heart2 dis-block trans-04 ab-t-l" src="../files/images/icons/icon-heart-02.png" alt="ICON">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,49 @@
+﻿@model List<TblAccount>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.AccountId</td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                <a asp-area="Admin" asp-controller="AdminAccounts" asp-action="Details" asp-route-accountID="@item.AccountId">@item.FullName</a>
+            </td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.Email
+            </td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                @item.Phone
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                @item.Role.RoleName
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @if (item.Active == true)
+                {
+                    <div class="d-flex align-items-center">
+
+                        <div class="badge border-primary border-1 text-primary">Hoạt động</div>
+                    </div>
+                }
+                else
+                {
+                    <div class="d-flex align-items-center">
+
+                        <div class="badge border-danger border-1 text-danger">Ngưng hoạt động</div>
+                    </div>
+                }
+            </td>
+
+
+
+            <td style="min-width: 150px !important;">
+                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Details" asp-route-accountID="@item.AccountId"><i class="ri-eye-line"></i></a>
+                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Edit" asp-route-accountID="@item.AccountId"><i class="ri-edit-2-line"></i></a>
+                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminAccounts" asp-action="Delete" asp-route-accountID="@item.AccountId"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+    }
+}

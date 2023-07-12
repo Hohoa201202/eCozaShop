@@ -1,0 +1,26 @@
+﻿@using eCozaStore.Models;
+@using eCozaStore.Utilities;
+@model IList<ViewOrderDetail>
+
+
+<!-- OrderDetails -->
+@foreach (var item in Model)
+{
+    string Url = Functions.TitleSlugGeneration("product", item.ProductName, item.ProductId);
+    <tr class="table_row" style="height: 123px;">
+        <td class="column-1" style="padding-bottom: 0;">
+            <div class="how-itemcart1">
+                <img src="@item.Thumb" alt="IMG">
+            </div>
+        </td>
+        <td class="column-2" style="padding-bottom: 0; width: 333px;">
+            <a href="/@Url"> @item.ProductName </a>
+        </td>
+        <td class="column-3" style="text-align: center; padding-bottom: 0;">
+            <span>X @item.Quantity</span>
+        </td>
+        <td class="column-4" style="padding-bottom: 0;"></td>
+        <td class="column-5" style="padding-bottom: 0;">@String.Format("{0:0,00}", item.Total) đ</td>
+    </tr>
+}
+<!-- END OrderDetails-->

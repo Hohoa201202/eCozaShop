@@ -1,0 +1,135 @@
+﻿@using eCozaStore.Models;
+@using PagedList.Core.Mvc;
+@model PagedList.Core.IPagedList<ViewPostStatus>
+
+@{
+    ViewData["Title"] = "Bài viết của tôi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="p-d-desktop">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="bread-crumb flex-w p-r-15 p-t-30 p-lr-0-lg">
+            <a asp-controller="Home" asp-action="Index" class="stext-109 cl8 hov-cl1 trans-04">
+                Home
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+
+            <a href="/pages/blog.html" class="stext-109 cl8 hov-cl1 trans-04">
+                Quản lý bài viết
+            </a>
+
+        </div>
+    </div>
+    <!-- breadcrumb -->
+    <!-- Content page -->
+    <section class="bg0 p-t-52 p-b-20">
+        <div class="container">
+            <div class="table-responsive" style="    box-shadow: rgb(0 0 0 / 31%) 0px 0px 4px;">
+                <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important; ">
+                    <thead>
+                        <tr>
+                            <th style="padding: 1rem !important; width: 5rem;">ID</th>
+                            <th style="padding: 1rem !important; ">Tiêu đề</th>
+                            <th style="padding: 1rem !important; ">Mô tả ngắn</th>
+                            <th style="text-align: center;padding: 1rem !important; width: 2rem;">Ngày đăng</th>
+                            <th style="text-align: center;padding: 1rem !important; width: 2rem;">Trạng thái</th>
+                            <th style="padding: 1rem !important; width: 2rem;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="records_table" style="vertical-align:-webkit-baseline-middle !important;">
+                        @if (Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.PostId</td>
+
+                                    <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                        @item.Title
+                                    </td>
+
+                                    <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                        @item.Abstract
+                                    </td>
+
+                                    <td style="text-align: center; padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 200px !important">
+                                        @item.CreatedDate.Value.ToString("dd-MM-yyyy - HH:mm")
+                                    </td>
+
+                                    <td style="text-align: center;padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 200px !important">
+                                        @item.StatusName
+                                    </td>
+
+                                    <td style="min-width: 150px !important;">
+                                        @*<a class="btn btn-primary btn-sm" title="xem" asp-controller="AdminPosts" asp-action="Details" asp-route-postID="@item.PostId"><i class="ri-eye-line"></i></a>*@
+                                        <a class="btn btn-success btn-sm" title="Sửa bài viết" asp-controller="MyAccount" asp-action="EditMyPost" asp-route-id="@item.PostId"><i class="fa-solid fa-pen-to-square"></i></a>
+                                        <a class="btn btn-danger btn-sm js-show-dell1" title="Xóa bài viết" style="color: #fff" data-locationid="@item.PostId"><i class="fa-solid fa-trash"></i></a>
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <div class="flex-l-m flex-w w-full p-t-10 m-lr--7 m-b-50" style="justify-content: center; margin: 0;     margin-bottom: 50px;">
+                    <br />
+                    <nav aria-label="Page navigation example">
+                        <pager class="pager-container" list="@Model" asp-controller="MyAccount" asp-action="MyPost" options="@PagedListRenderOptions.PageNumbersPlusPrevAndNext" />
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content page -->
+</div>
+<!-- Xác nhận xóa -->
+<div class="flex-m wrap-modal1 js-dell1">
+    <div class="overlay-modal1 js-hide-dell1" style="opacity: 0.5;"></div>
+
+    <div class="flex-m container" style="max-width: 499px; ">
+        <div class="bg0 p-lr-15-lg how-pos3-parent" style="padding: 32px; box-shadow: 0px 0px 4px rgb(0 0 0 / 22%); border-radius: 10px;     width: 100%;">
+            <div style="text-align: left; font-size: 18px;">Bạn chắc chắn muốn xóa bài viết này không ?</div>
+
+            <div class="m-t-32">
+                <div class="col-sm-12 flex-m" style="padding: 0; justify-content: flex-end;">
+                    <a class="btn btn-box-shadow js-hide-dell1" style="font-weight: 400; border-radius: 50px; min-width: 100px; border-color: #333; ">
+                        Trở lại
+                    </a>
+
+                    <a class="btn btn-primary del-address" style="font-weight: 400; border-radius: 50px; min-width: 100px; margin-left: 16px; border-color: #333; color: #fff;">
+                        <i class="fa-solid fa-trash" style="margin-right: 8px"></i>
+                        Xóa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".del-address").click(function (event) {
+                event.preventDefault();
+                var locationid = $(".show-dellll").attr("data-locationid");
+                $.ajax({
+                    //type: "GET",
+                    url: "@Url.RouteUrl("DelMyPost")",
+                    data: {
+                        postid: locationid
+                    },
+                    success: function (result) {
+                        window.location.href = "@Url.RouteUrl("MyPost")";
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

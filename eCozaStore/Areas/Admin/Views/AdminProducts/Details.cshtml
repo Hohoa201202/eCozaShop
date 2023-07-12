@@ -1,0 +1,340 @@
+﻿@model eCozaStore.Models.TblProduct
+@{
+    ViewData["Title"] = "Thông tin sản phẩm" + ':' + @Model.ProductName;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link href="~/adassets/css/loadimgae.css" rel="stylesheet" />
+}
+
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Thông tin sản phẩm</a></li>
+                <li class="breadcrumb-item active">Chi tiết sản phẩm : @Model.ProductName</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body" style="padding: 50px ;">
+                        <form>
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row d-flex align-items-center justify-content-between">
+
+                                        <div class="col-6">
+                                            <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist" style="margin-bottom: 30px !important; padding: 50px 0 0 0 !important;">
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-home" type="button" role="tab" aria-controls="home"
+                                                        aria-selected="true">
+                                                        Thông tin chi tiết
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-profile" type="button" role="tab" aria-controls="profile"
+                                                        aria-selected="false" tabindex="-1">
+                                                        Hình ảnh
+                                                    </button>
+                                                </li>
+
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-contact" type="button" role="tab" aria-controls="contact"
+                                                        aria-selected="false" tabindex="-1">
+                                                        Mô tả thêm
+                                                    </button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-6" style="text-align: -webkit-right !important">
+
+                                            <div class="col-md-4" style="text-align: right !important;">
+                                                <a class="btn btn-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" asp-route-productID="@Model.ProductId">
+                                                    <i class="bx bx-highlight m-r-5"></i>
+                                                    <span>Chỉnh sửa</span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card" style="padding-top: 50px !important">
+                                <div class="card-body">
+                                    <div class="tab-content pt-2" id="borderedTabJustifiedContent">
+
+                                        <div class="tab-pane fade show active" id="bordered-justified-home" role="tabpanel" aria-labelledby="home-tab">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">ID:</td>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.ProductId</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Tên sản phẩm:</td>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.ProductName</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Danh mục:</td>
+                                                        @if (Model.CategoryId != null)
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                @Model.Category.CategoryName
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                <span class="badge bg-info">
+                                                                    <i class=" bx bx-x"></i>
+                                                                    No
+                                                                </span>
+                                                            </td>
+                                                        }
+
+                                                    </tr>
+                                                     <tr>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Tồn kho:</td>
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                    @if (Model.UnitsInStock != null)
+                                                                    {
+                                                                        if (Model.UnitsInStock.Value > 0)
+                                                                        { //Nếu UnitsInStock.Value > 0 thì còn hàng
+                                                                            @Model.UnitsInStock
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        
+
+                                                                            <p class="text-danger">Hết hàng</p>
+                                                               
+                                                                        }
+                                                                    }
+
+                                                                    else
+                                                                    {
+                                                                    <span class="badge bg-info">
+                                                                        <i class=" bx bx-x"></i>
+                                                                        No
+                                                                    </span>
+                                                                    }
+
+                                                            </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Giá bán:</td>
+                                                        @if (Model.Price != null)
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.Price.Value.ToString("#, ###") VNĐ</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                <span class="badge bg-info">
+                                                                    <i class=" bx bx-x"></i>
+                                                                    No
+                                                                </span>
+                                                            </td>
+                                                        }
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Discount:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.Discount</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Active:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                            @if (Model.Active)
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="Active" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="Active" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="Active" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="Active" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">BestSellers:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                            @if (Model.BestSellers)
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="BestSellers" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="BestSellers" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="BestSellers" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="BestSellers" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">HomeFlag:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                            @if (Model.HomeFlag)
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="HomeFlag" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="HomeFlag" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="HomeFlag" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="HomeFlag" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                        </td>
+                                                    </tr>
+
+                                                 
+
+
+
+                                                </tbody>
+
+
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-pane fade" id="bordered-justified-profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                        <section class="section">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="card">
+
+                                                        <div class="card-body" style="padding-top: 20px;">
+                                                            <h4 class="card-title">Ảnh đại diện</h4>
+                                                            <img width="100%" height="auto" src="@Model.Thumb" alt="@Model.Title" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-8">
+                                                    <div class="card">
+                                                        <div class="card-body" style="padding-top: 20px;">
+                                                            <h4 class="card-title" style="padding-left: 10px;">Ảnh chi tiết</h4>
+                                                            <div id="box-img-upload" data-id="@Model.ProductId" role="tabpanel" aria-labelledby="profile-tab">
+                                                                @*Hiển thị danh sách hình ảnh chi tiết ở đây*@
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+
+                                    </div>
+
+                                    <div class="tab-pane fade" id="bordered-justified-contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        <textarea id="Description" asp-for="Description"></textarea>
+                                    </div>
+
+
+                                </div><!-- End Bordered Tabs Justified -->
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+@{
+    var summerNote = new eCozaStore.Areas.Admin.Models.SummerNote("#Description");
+
+    <partial name="_SummerNote" model="summerNote" />
+}
+
+
+@section Scripts {
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        var $jj = jQuery.noConflict(); // đổi bí danh cho file jquery tránh trùng lặp với thư viện khác ($) => đây còn gọi là cách sử dụng jquery với chế độ không xung đột
+
+
+        // Lấy danh sách Images chi tiết
+
+        // Hàm hiển thị hình ảnh
+        function LoadImages() {
+
+            var box = $jj("#box-img-upload");
+
+            var ProductID = box.data("id");
+
+            box.empty();
+
+            var formData = new FormData();
+            formData.append("id", ProductID);
+
+            var urlListImage = "@Url.Action("ListImages")";
+
+            $jj.ajax({
+                data: formData,
+                cache: false,
+                url: urlListImage,
+                type: "POST",
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    // xử lý
+
+                    data.images.forEach(function (item) {
+                        //console.log(item.id);
+                        //console.log(item.imagePath);
+
+                        var e = $jj(
+                            '<figure class= "container" >'
+                            + '<img src="' + item.imagePath + '" alt = "ecozastore" />  </figure>');
+
+
+                        box.append(e);
+
+                    });
+                }
+            });
+        }
+
+        $jj(document).ready(function () {
+            LoadImages();
+        });
+    </script>
+}

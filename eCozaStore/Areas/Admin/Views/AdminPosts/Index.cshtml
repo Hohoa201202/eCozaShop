@@ -1,0 +1,193 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<eCozaStore.Models.TblPost>
+
+@{
+    ViewData["Title"] = "Danh sách bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagetitle">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Danh sách bài viết : Trang @ViewBag.CurrentPage</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body" style="padding: 50px ;">
+                    <div class="row m-b-30" style="align-items: center; margin-bottom: 30px !important;">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+
+                                    <div class="input-affix m-v-10">
+                                        <i class="prefix-icon anticon anticon-search opacity-04"></i>
+                                        <input id="keyword" name="keyword" type="text" class="form-control"
+                                               placeholder="Tìm kiếm bài viết">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+
+                                    <select asp-items="@(new SelectList(ViewBag.CategoryList, "Value", "Text"))" class="form-select" aria-label="Default select example">
+                                       
+
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" style="text-align: right !important;">
+                            <a class="btn btn-primary" asp-area="Admin" asp-controller="AdminPosts" asp-action="Create">
+                                <i class="anticon anticon-plus-circle m-r-5"></i>
+                                <span>Thêm bài viết</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1rem !important;">ID</th>
+                                    <th style="padding: 1rem !important;">Tiêu đề</th>
+                                    <th style="padding: 1rem !important;">Ngày viết</th>
+                                    <th style="padding: 1rem !important;">Tin hót</th>
+                                    <th style="padding: 1rem !important;">Tin mới</th>
+                                    <th style="padding: 1rem !important;">Trạng thái</th>
+                                    <th style="padding: 1rem !important;">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="records_table" style="vertical-align:-webkit-baseline-middle !important;">
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.PostId</td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;" >
+                                                @item.Title
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 200px !important">
+                                                @item.CreatedDate.Value.ToString("dd-MM-yyyy")
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if (item.IsHot == true)
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked disabled>
+                                                        <label for="IsHot" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="IsHot" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if (item.IsNewfeed == true)
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked disabled>
+                                                        <label for="IsNewfeed" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="IsNewfeed" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if (item.IsActive == true)
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked disabled>
+                                                        <label for="IsActive" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="IsActive" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                            </td>
+
+                                            <td style="min-width: 150px !important;">
+                                                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminPosts" asp-action="Details" asp-route-postID="@item.PostId"><i class="ri-eye-line"></i></a>
+                                                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminPosts" asp-action="Edit" asp-route-postID="@item.PostId"><i class="ri-edit-2-line"></i></a>
+                                                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminPosts" asp-action="Delete" asp-route-postID="@item.PostId"><i class="bi bi-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+
+                            @if(Model.PageCount > 1) {
+
+                                <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminPosts" asp-action="Index" options="PagedListRenderOptions.Bootstrap4PageNumbersOnly" />
+                            }
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+
+            // Phần này để tìm kiếm Danh sách sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $('#keyword').val();
+                $.ajax({
+                    url: '/Admin/Search/FindPosts/',
+                    datatype: "json",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html("");
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+            });
+        });
+    </script>
+}

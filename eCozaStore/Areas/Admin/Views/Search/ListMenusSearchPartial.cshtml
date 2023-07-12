@@ -1,0 +1,51 @@
+﻿@model List<TblMenu>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.MenuId</td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.MenuName
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; ">
+                @item.Levels
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.ParentId
+            </td>
+
+
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; ">
+                @item.MenuOrder
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @if (item.IsActive == true)
+                {
+                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked disabled>
+                        <label for="IsActive" class="form-check-label"></label>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                        <label for="IsActive" class="form-check-label"></label>
+                    </div>
+                }
+            </td>
+
+            <td style="min-width: 150px !important;">
+                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminMenus" asp-action="Details" asp-route-menuID="@item.MenuId"><i class="ri-eye-line"></i></a>
+                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminMenus" asp-action="Edit" asp-route-menuID="@item.MenuId"><i class="ri-edit-2-line"></i></a>
+                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminMenus" asp-action="Delete" asp-route-menuID="@item.MenuId"><i class="bi bi-trash"></i></a>
+            </td>
+
+        </tr>
+    }
+}

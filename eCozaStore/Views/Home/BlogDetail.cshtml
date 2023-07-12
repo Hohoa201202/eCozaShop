@@ -1,0 +1,199 @@
+﻿@using eCozaStore.Models;
+@model eCozaStore.Models.TblPost;
+
+@{
+    ViewData["Title"] = "BlogDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="p-d-desktop">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="bread-crumb flex-w p-r-15 p-t-30 p-lr-0-lg">
+            <a asp-controller="Home" asp-action="Index" class="stext-109 cl8 hov-cl1 trans-04">
+                Home
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+
+            <a href="/pages/blog.html" class="stext-109 cl8 hov-cl1 trans-04">
+                Blog
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+
+            <span class="stext-109 cl4">
+                @Html.DisplayFor(model => model.Title)
+            </span>
+        </div>
+    </div>
+    <!-- breadcrumb -->
+    <!-- Content page -->
+    <section class="bg0 p-t-52 p-b-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class="p-r-45 p-r-0-lg">
+                        <!--  -->
+                        <div class="wrap-pic-w how-pos5-parent wow fadeInUp" data-wow-delay="0.1s">
+                            <img src="@Model.Thumb" alt="@Model.Title">
+
+                            <div class="flex-col-c-m size-123 bg9 how-pos5">
+                                <span class="ltext-107 cl2 txt-center">
+                                    @Model.CreatedDate.Value.ToString("dd")
+                                </span>
+
+                                <span class="stext-109 cl3 txt-center">
+                                    @Model.CreatedDate.Value.ToString("MMM yyyy")
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-t-32 wow fadeInUp" data-wow-delay="0.1s">
+                            <span class="flex-w flex-m stext-111 cl2 p-b-19">
+
+                                <span>
+                                    Đăng ngày @Model.CreatedDate.Value.ToString("dd/MM/yyyy") lúc @Model.CreatedDate.Value.ToString("HH:mm")
+                                    <span class="cl12 m-l-4 m-r-6">|</span>
+                                </span>
+
+                                <span>
+                                    <span class="cl4">By</span> @Html.DisplayFor(model => model.Author)
+                                    <span class="cl12 m-l-4 m-r-6">|</span>
+                                </span>
+
+                                @if (Model.Sview == null)
+                                {
+                                    <span>
+                                        <i class="fa-sharp fa-solid fa-eye"></i>
+                                        1 lượt xem
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span>
+                                        <i class="fa-sharp fa-solid fa-eye"></i>
+                                        @Model.Sview lượt xem
+                                    </span>
+                                }
+                            </span>
+
+                            <h4 class="ltext-109 cl2 p-b-28">
+                                @Html.DisplayFor(model => model.Title)
+                            </h4>
+
+                            <p class="stext-117 cl6 p-b-26">
+                                @Html.Raw(Model.Contents)
+                            </p>
+                        </div>
+
+                        <div class="flex-w flex-t p-t-16 wow fadeInUp" data-wow-delay="0.1s">
+                            <span class="size-216 stext-116 cl8 p-t-4">
+                                Tags
+                            </span>
+
+                            <div class="flex-w size-217">
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Streetstyle
+                                </a>
+
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Crafts
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Form nhập bình luận -->
+                        <div class="p-t-40 wow fadeInUp" data-wow-delay="0.1s" style="border: 1px solid rgba(0, 0, 0, 0.2);padding: 36px;border-radius: 29px;margin: 18px 0 40px;">
+                            <h5 class="mtext-109 cl2 p-b-16">
+                                Để lại bình luận
+                            </h5>
+
+                            <form asp-action="BlogDetail" asp-controller="Home" method="post" enctype="multipart/form-data">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <input type="hidden" name="PostId" value="@Model.PostId" />
+
+                                @if (ViewBag.IsLogin == false)
+                                {
+                                    <div class="bor19 size-218 m-b-20" style="border-radius: 10px;">
+                                        <input name="Author" type="text" class="stext-111 cl2 plh3 size-116 p-lr-18" autocomplete="off" placeholder="Họ tên..." style="border-radius: 10px;" />
+                                    </div>
+
+                                    <div class="bor19 m-b-30" style="border-radius: 10px;">
+                                        <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px;"></textarea>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="flex-m m-b-30">
+                                        <div class="wrap-item-gallery m-r-32" style="width: 6.3rem; height: 6.3rem;">
+                                            <div class="bg-img1" data-lightbox="gallery" style="background-image: url('../files/images/account/@ViewBag.Avt'); width: 100%; height: 100%; border-radius: 50%;"></div>
+                                        </div>
+                                        <div class="bor19" style="border-radius: 10px; width: 83%">
+                                            <textarea required name="Content" class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" placeholder="Mời bạn nhập nội dung..." style="border-radius: 10px; min-height: 100px;"></textarea>
+                                        </div>
+                                    </div>
+                                }
+
+                                <button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04">
+                                    Gửi
+                                </button>
+                            </form>
+
+                            <!--Danh sách các bình luận-->
+                            @await Component.InvokeAsync("CommentView", new{postID = Model.PostId, page = ViewBag.page})
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 p-b-80">
+                    <div class="side-menu">
+                        <div class="bor17 of-hidden pos-relative">
+                            <input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Search">
+
+                            <button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </div>
+
+                        @await Component.InvokeAsync("RecentPostView")
+
+                        @await Component.InvokeAsync("FeaturedProductsView")
+
+                        <div class="p-t-50">
+                            <h4 class="mtext-112 cl2 p-b-27">
+                                Tags
+                            </h4>
+
+                            <div class="flex-w m-r--5">
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Fashion
+                                </a>
+
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Lifestyle
+                                </a>
+
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Denim
+                                </a>
+
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Streetstyle
+                                </a>
+
+                                <a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+                                    Crafts
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content page -->
+</div>
+
+
+
+

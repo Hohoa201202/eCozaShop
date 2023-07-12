@@ -1,0 +1,98 @@
+/* _content/eCozaStore/Areas/Admin/Views/Shared/_AdminLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-3mqqjxrbat] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-3mqqjxrbat] {
+  color: #0077cc;
+}
+
+.btn-primary[b-3mqqjxrbat] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-3mqqjxrbat], .nav-pills .show > .nav-link[b-3mqqjxrbat] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-3mqqjxrbat] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-3mqqjxrbat] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-3mqqjxrbat] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-3mqqjxrbat] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-3mqqjxrbat] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/eCozaStore/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-mqnax4zotk] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-mqnax4zotk] {
+  color: #0077cc;
+}
+
+.btn-primary[b-mqnax4zotk] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-mqnax4zotk], .nav-pills .show > .nav-link[b-mqnax4zotk] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-mqnax4zotk] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-mqnax4zotk] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-mqnax4zotk] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-mqnax4zotk] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-mqnax4zotk] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

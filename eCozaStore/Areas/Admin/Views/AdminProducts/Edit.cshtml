@@ -1,0 +1,328 @@
+﻿@model eCozaStore.Models.TblProduct
+@{
+    ViewData["Title"] = "Chỉnh sửa sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link href="~/adassets/css/loadimgae.css" rel="stylesheet" />
+}
+
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="AdminProducts" asp-action="Index">Danh sách sản phẩm</a></li>
+                <li class="breadcrumb-item active">Chỉnh sửa sản phẩm</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body" style="padding: 50px ;">
+                        <form asp-controller="AdminProducts" asp-action="Edit" method="post" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="ProductId" />
+                            <input type="hidden" asp-for="CreatedDate" />
+                            <input type="hidden" asp-for="HomeFlag" />
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row d-flex align-items-center justify-content-between">
+
+                                        <div class="col-6">
+                                            <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist" style="margin-bottom: 30px !important; padding: 50px 0 0 0 !important;">
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-home" type="button" role="tab" aria-controls="home"
+                                                        aria-selected="true">
+                                                        Thông tin cơ bản
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-profile" type="button" role="tab" aria-controls="profile"
+                                                        aria-selected="false" tabindex="-1">
+                                                        Hình ảnh
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item flex-fill" role="presentation">
+                                                    <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-contact" type="button" role="tab" aria-controls="contact"
+                                                        aria-selected="false" tabindex="-1">
+                                                        Mô tả thêm
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6" style="text-align: -webkit-right !important">
+
+                                            <button class="btn btn-primary">
+                                                <i class="anticon anticon-save"></i>
+                                                <span>Lưu lại</span>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card" style="padding-top: 50px !important">
+                                <div class="card-body">
+                                    <div class="tab-content pt-2" id="borderedTabJustifiedContent">
+
+                                        <div class="tab-pane fade show active" id="bordered-justified-home" role="tabpanel" aria-labelledby="home-tab">
+
+                                            <div asp-validation-summary="All" class="text-danger"></div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" asp-for="ProductName">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Mô tả ngắn</label>
+                                                <div class="col-sm-10">
+                                                    <input asp-for="ShortDesc" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Giá bán</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" asp-for="Price">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Discount</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" asp-for="Discount">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label">Danh mục sản phẩm</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-select" aria-label="Default select example" asp-for="CategoryId" asp-items="ViewBag.DanhMuc">
+                                                        <option value="All" selected="" disabled="">Chọn danh mục</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Hàng tồn kho</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" asp-for="UnitsInStock">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mb-3">
+                                                <label for="Thumb" class="col-sm-2 col-form-label">Ảnh đại diện</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-secondary" type="button" onclick="openDialog()">Chọn ảnh</button>
+                                                        </div>
+                                                        <input asp-for="Thumb" type="text" class="form-control" id="file_input" aria-describedby="button-addon2" />
+                                                        <span asp-validation-for="Thumb" class="text-danger"></span>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputNumber" class="col-sm-2 col-form-label">Trạng thái</label>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="Active" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                        <label for="Active" class="form-check-label">Công khai</label>
+                                                    </div>
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="BestSellers" class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                                                        <label for="BestSellers" class="form-check-label">Bán chạy nhất</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="tab-pane fade" id="bordered-justified-profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                            <div class="row mb-3">
+
+                                                <div class="col-sm-10" style="padding-left: 20px;">
+                                                    <input type="file" name="fThumb" class="form-control collapse" id="selectfileupload" onchange="AutoUploadImage()">
+                                                    <span class="btn btn-secondary" onclick="ClickButtonUpload()">Tải ảnh</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="box-img-upload" data-id="@Model.ProductId" role="tabpanel" aria-labelledby="profile-tab">
+                                                @*Hiển thị danh sách hình ảnh chi tiết ở đây*@
+                                            </div>
+
+                                        </div>
+
+                                        <div class="tab-pane fade" id="bordered-justified-contact" role="tabpanel" aria-labelledby="contact-tab">
+                                            <textarea id="Description" asp-for="Description"></textarea>
+                                        </div>
+                                    </div><!-- End Bordered Tabs Justified -->
+
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @{
+        var summerNote = new eCozaStore.Areas.Admin.Models.SummerNote("#Description");
+
+        <partial name="_SummerNote" model="summerNote" />
+}
+
+    @section Scripts {
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var $jj = jQuery.noConflict(); // đổi bí danh cho file jquery tránh trùng lặp với thư viện khác ($) => đây còn gọi là cách sử dụng jquery với chế độ không xung đột
+
+        //
+
+        function AutoUploadImage() {
+
+            var formData = new FormData();
+
+            var id = $jj("#box-img-upload").data("id");
+            formData.append("id", id);
+
+            var sofile = document.getElementById("selectfileupload").files.length;
+
+            if (sofile == 0) return;
+
+            var fileData = document.getElementById("selectfileupload").files[0];
+            formData.append("fThumb", fileData);
+
+
+
+            var urlUploadImage = "@Url.Action("UploadImageAPI")";
+
+            $jj.ajax({
+                data: formData,
+                cache: false,
+                url: urlUploadImage,
+                type: "POST",
+                contentType: false,
+                processData: false,
+                success: function (data) {
+
+                    LoadImages();
+
+                }
+            });
+        }
+
+
+        // click button upload ảnh
+
+        function ClickButtonUpload() {
+            $jj("#selectfileupload").click();
+        }
+
+
+        // Bắt sự kiện bấm nút xóa hình ảnh
+
+        function setClickDeleteImage() {
+            $jj("#box-img-upload .container a").click(function () {
+
+                if (confirm("Bạn có chắc chắn xóa không?") != true) return;
+
+                var aButton = $jj(this);
+                var id = aButton.data("id");
+
+                var formData = new FormData();
+                formData.append("id", id);
+
+                var urlDeleteImage = "@Url.Action("DeleteImages")";
+
+                $jj.ajax({
+                    data: formData,
+                    cache: false,
+                    url: urlDeleteImage,
+                    type: "POST",
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        LoadImages();
+
+                    }
+                });
+            });
+        }
+
+        // Hàm hiển thị hình ảnh
+        function LoadImages() {
+
+            var box = $jj("#box-img-upload");
+
+            var ProductID = box.data("id");
+
+            box.empty();
+
+            var formData = new FormData();
+            formData.append("id", ProductID);
+
+            var urlListImage = "@Url.Action("ListImages")";
+
+            $jj.ajax({
+                data: formData,
+                cache: false,
+                url: urlListImage,
+                type: "POST",
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    // xử lý
+
+                    data.images.forEach(function (item) {
+                        //console.log(item.id);
+                        //console.log(item.imagePath);
+
+                        var e = $jj(
+                            '<figure class= "container container-img" >'
+                            + '<img src="' + item.imagePath + '" alt = "sample89" />'
+
+                            + '<figcaption class="figcaption"> <h3> Xác nhận xóa </h3> </figcaption>'
+
+                            + '<a data-id="' + item.id + '" > </a>  </figure>');
+
+
+                        box.append(e);
+
+                    });
+                    setClickDeleteImage();
+                }
+            });
+        }
+
+        $jj(document).ready(function () {
+            LoadImages();
+        });
+    </script>
+}

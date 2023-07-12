@@ -1,0 +1,233 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<eCozaStore.Models.TblProduct>
+
+@{
+    int CurrentPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Danh sách sản phẩm" + ' ' + CurrentPage;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagetitle">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Danh sách sản phẩm : Trang @CurrentPage</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body" style="padding: 50px ;">
+                    <div class="row m-b-30" style="align-items: center; margin-bottom: 30px !important;">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+
+                                    <div class="input-affix m-v-10">
+                                        <i class="prefix-icon anticon anticon-search opacity-04"></i>
+                                        <input id="keyword" name="keyword" type="text" class="form-control"
+                                               placeholder="Tìm kiếm sản phẩm">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                   @* <select asp-items="@(new SelectList(ViewBag.CategoryList, "Value", "Text"))" id="txtCategoryID" name="txtCategoryID" class="form-select" aria-label="Default select example">
+                                        <option disabled selected>Chọn danh mục</option>
+                                        <option value="All">Chọn tất cả</option>
+                                    </select>*@
+                                    <select asp-items="ViewBag.DanhMuc" name="txtCategoryID" id="txtCategoryID" class="form-select" aria-label="Default select example">
+                                        <option disabled selected>Chọn danh mục</option>
+                                        <option value="All">Chọn tất cả</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" style="text-align: right !important;">
+                            <a class="btn btn-primary" asp-area="Admin" asp-controller="AdminProducts" asp-action="Create">
+                                <i class="anticon anticon-plus-circle m-r-5"></i>
+                                <span>Thêm sản phẩm</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1rem !important;">ID</th>
+                                    <th style="padding: 1rem !important;">Tên sản phẩm</th>
+                                    <th style="padding: 1rem !important;">Danh mục</th>
+                                    <th style="padding: 1rem !important;">Giá</th>
+                                    <th style="padding: 1rem !important;">Tồn kho</th>
+                                    <th style="padding: 1rem !important;">Trạng thái</th>
+                                    <th style="padding: 1rem !important;">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="records_table" style="vertical-align:-webkit-baseline-middle !important;">
+                                @if (Model != null)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.ProductId</td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                <a asp-area="Admin" asp-controller="AdminProducts" asp-action="Details" asp-route-productID="@item.ProductId">@item.ProductName</a>
+                                            </td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if(item.CategoryId != null) {
+                                                    @item.Category.CategoryName
+                                                }
+                                                else {
+                                                     <span class="badge bg-info">
+                                                            <i class=" bx bx-x"></i>
+                                                            No
+                                                      </span>
+                                                }
+                                            </td>
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                                                @if (item.Price != null) {
+                                                    @item.Price.Value.ToString("#,### $")
+                                                }else {
+                                                     <span class="badge bg-info">
+                                                        <i class=" bx bx-x"></i>
+                                                        No
+                                                    </span>
+                                                }
+                                                
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if(item.UnitsInStock != null) {
+                                                    if (item.UnitsInStock.Value > 0)
+                                                    { //Nếu UnitsInStock.Value > 0 thì còn hàng
+                                                        <div class="d-flex align-items-center">
+
+                                                            <div class="badge border-primary border-1 text-primary">@item.UnitsInStock</div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="d-flex align-items-center">
+
+                                                            <div class="badge border-danger border-1 text-danger">Hết hàng</div>
+                                                        </div>
+                                                    }
+                                                }
+                                               
+                                                else
+                                                {
+                                                    <span class="badge bg-info">
+                                                        <i class=" bx bx-x"></i>
+                                                        No
+                                                    </span>
+                                                }
+                                               
+                                            </td>
+
+                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                @if (item.Active)
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="@item.Active" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="Active" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                        <input asp-for="@item.Active" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                        <label for="Active" class="form-check-label"></label>
+                                                    </div>
+                                                }
+                                            </td>
+
+                                            <td style="min-width: 150px !important;">
+
+                                                <a class="btn btn-primary btn-sm" title="Thêm hình ảnh" asp-area="Admin" asp-controller="AdminProducts" asp-action="Details" asp-route-productID="@item.ProductId"><i class="ri-eye-line"></i></a>
+                                                <a class="btn btn-success btn-sm" title="sửa" asp-area="Admin" asp-controller="AdminProducts" asp-action="Edit" asp-route-productID="@item.ProductId"><i class="ri-edit-2-line"></i></a>
+                                                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminProducts" asp-action="Delete" asp-route-productID="@item.ProductId"><i class="bi bi-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                }
+
+
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation example">
+
+                            @if(Model.PageCount > 1) {
+                                <pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-action="Index" asp-route-CategoryID="@ViewBag.CurrentCategoryID" options="PagedListRenderOptions.Bootstrap4PageNumbersOnly" />
+
+                            }
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Phần này lọc danh mục
+            jQuery("#txtCategoryID").change(function () {
+                var CategoryID = jQuery(this).children(":selected").attr("value");
+                CategoryID = parseFloat(CategoryID);
+                $('#txtCategoryID option')
+                    .removeAttr('selected');
+                $("#txtCategoryID > [value=" + CategoryID + "]").attr("selected", "true");
+                $.ajax({
+                    url: '/Admin/AdminProducts/Filtter',
+                    datatype: "json",
+                    type: "GET",
+                    data: {
+                        CategoryID: CategoryID
+                    },
+                    async: true,
+                    success: function (results) {
+                        if (results.status == "success") {
+                            window.location.href = results.redirectUrl;
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+            });
+
+            // Phần này để tìm kiếm Danh sách sản phẩm
+            $("#keyword").keyup(function () {
+                var strkeyword = $('#keyword').val();
+                $.ajax({
+                    url: '/Admin/Search/FindProduct/',
+                    datatype: "json",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#records_table").html("");
+                        $("#records_table").html(results);
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+            });
+        });
+    </script>
+}

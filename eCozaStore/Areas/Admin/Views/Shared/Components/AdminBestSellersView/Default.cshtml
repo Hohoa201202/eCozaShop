@@ -1,0 +1,62 @@
+﻿@using eCozaStore.Models
+@using eCozaStore.Utilities
+@model IList<ViewBestSellers>
+
+
+<div class="card top-selling overflow-auto" style="min-height: 400px !important">
+
+    <div class="filter">
+        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li class="dropdown-header text-start">
+                <h6>Filter</h6>
+            </li>
+
+            <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+            <li><a class="dropdown-item" href="#">Tháng nay</a></li>
+            <li><a class="dropdown-item" href="#">Năm nay</a></li>
+        </ul>
+    </div>
+
+    <div class="card-body pb-0">
+        <h5 class="card-title">Bán chạy nhất <span>| Hôm nay</span></h5>
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Sản phẩm</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Đã bán</th>
+                    <th scope="col">Doanh thu</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model) {
+                    string Url = Functions.TitleSlugGeneration("product", item.ProductName, item.ProductId);
+                    <tr>
+                        <th scope="row"><a href="/@Url"><img src="@item.Thumb" alt="@item.Title"></a></th>
+                        <td><a href="/@Url" class="text-primary fw-bold">@item.ProductName/a></td>
+                        @if(item.Price != null) {
+                            <td>@item.Price.Value.ToString("#,# $")</td>
+                        }
+                        <td class="fw-bold">
+                           
+                                @item.Sold
+                        </td>
+                        <td>
+                            @if (item.Total != null)
+                            {
+                                @item.Total.Value.ToString("#,# $")
+                            }
+                        </td>
+                    </tr>
+                }
+               
+                
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

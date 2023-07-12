@@ -1,0 +1,34 @@
+﻿@using eCozaStore.Models;
+@using eCozaStore.Utilities;
+@model IList<TblPost>
+
+<div class="p-t-65 wow fadeInUp" data-wow-delay="0.1s">
+	<div class="section-title section-title-sm position-relative pb-3 mb-4">
+		<h4 class="mtext-112 cl2 section-title section-title-sm">
+			Bài viết gần đây
+		</h4>
+	</div>
+
+	<ul style="padding: 0">
+		@foreach (var item in Model)
+		{
+			string Url = Functions.TitleSlugGeneration("blogDetail", @item.Title, @item.PostId);
+
+			<li class="flex-w flex-t p-b-30">
+				<a href="/@Url" class="wrao-pic-w size-214 m-r-20">
+					<img style="width: 100%" src="@item.Thumb" alt="Ảnh bài viết @item.Title">
+				</a>
+
+				<div class="size-215 flex-col-t">
+					<a href="/@Url" class="title-style stext-116 cl8 hov-cl1 trans-04">
+						@item.Title
+					</a>
+
+					<span class="cl6 stext-109">
+						@item.Author | @item.CreatedDate.Value.ToString("dd/MM/yyyy - HH:mm")
+					</span>
+				</div>
+			</li>
+		}
+	</ul>
+</div>

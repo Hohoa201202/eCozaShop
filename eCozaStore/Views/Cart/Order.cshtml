@@ -1,0 +1,125 @@
+﻿@using eCozaStore.Models;
+@using eCozaStore.Utilities;
+@using PagedList.Core.Mvc;
+
+@model PagedList.Core.IPagedList<ViewOrderStatus>
+
+@{
+    ViewData["Title"] = "Đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="p-d-desktop">
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+            <a asp-controller="Home" asp-action="Index" class="stext-109 cl8 hov-cl1 trans-04">
+                Home
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+
+            <a class="stext-109 cl8 hov-cl1 trans-04">
+                Quản lý giỏ hàng
+            </a>
+        </div>
+    </div>
+
+    <div class="container p-t-65">
+        <div class="row">
+
+            <div class="col-sm-10 col-lg-7 col-xl-3 m-lr-auto m-b-50 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bor10 p-lr-40 p-t-30 p-b-30 m-l-63 m-lr-0-xl p-lr-15-sm" style="margin-left: 24px;">
+                    <ul class="sidebar-link w-full" style="padding: 0;">
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="MyAcc" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-user  m-r-10" aria-hidden="true"></i>
+                                Quản lý hồ sơ
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11 section-title section-title-sm position-relative">
+                            <a href="#" class="stext-102 cl2 hov-cl1 trans-04 section-title section-title-sm" style="color: #007bff;">
+                                <i class="fa-solid fa-square-check m-r-10" aria-hidden="true"></i>
+                                Quản lý đơn hàng
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="MyAddress" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-location-dot m-r-10" aria-hidden="true"></i>
+                                Quản lý địa chỉ
+                            </a>
+                        </li>
+
+                        <li class="p-b-11 p-t-11">
+                            <a asp-route="ChangePass" class="stext-102 cl2 hov-cl1 trans-04">
+                                <i class="fa-solid fa-lock  m-r-10" aria-hidden="true"></i>
+                                Đổi mật khẩu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10 col-xl-9 m-lr-auto m-b-50">
+                <!--Danh sách đơn hàng-->
+                @foreach (var item in Model.OrderByDescending(o => o.OrderDate))
+                {
+                    <div class="m-l-25 m-r--38 m-lr-0-xl m-b-38 table-border-boxshadow wow fadeInUp" data-wow-delay="0.1s" style="box-shadow: 2px 3px 3px rgb(0 0 0 / 22%);">
+                        <div class="wrap-table-shopping-cart">
+                            <table class="table-shopping-cart">
+                                <tr class="table_head">
+                                    <th class="column-1">ID đơn hàng: </th>
+                                    <th class="column-2" style="width: 333px;">@item.OrderId </th>
+                                    <th class="column-3" style="text-align: center;"></th>
+                                    <th class="column-4" style="text-align: center;">@item.OrderDate.Value.ToString("dd/MM/yyyy - HH:mm")</th>
+                                    <th class="column-5">@item.Status</th>
+                                </tr>
+
+                                <!-- Danh sách sản phẩm của đơn hàng -->
+                                @await Component.InvokeAsync("OrderDetailView", new {OrderID = item.OrderId})
+
+                            </table>
+                        </div>
+                        <div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm ">
+                            <div class="flex-w m-r-20 m-tb-5 position-relative" style="flex-direction: column">
+
+                                <div class="flex-w flex-t" style="justify-content: space-between;">
+                                    <span class="stext-110 cl2" style="font-size: 18px; margin-bottom: 10px;">
+                                        Địa chỉ nhận hàng
+                                    </span>
+                                </div>
+
+                                <div class="flex-w flex-t" style="justify-content: space-between;">
+                                    <span class="stext-110 cl2" style="font-weight: 500; margin-bottom: 4px;">
+                                        @item.FullName
+                                    </span>
+                                </div>
+
+                                <div class="flex-w flex-t" style="justify-content: space-between;">
+                                    <span class="stext-110" style="font-size: 13px;">
+                                        @item.Phone
+                                    </span>
+                                </div>
+
+                                <div class="flex-w flex-t" style="justify-content: space-between;">
+                                    <span class="stext-110" style="font-size: 13px;">
+                                        @item.Address
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!-- Pagination -->
+                <div class="flex-l-m flex-w w-full p-t-10 m-lr--7 wow fadeInUp" data-wow-delay="0.1s"  style="justify-content: center">
+                    <br />
+                    <nav aria-label="Page navigation example">
+                        <pager class="pager-container" list="@Model" asp-controller="Cart" asp-action="Order" options="@PagedListRenderOptions.PageNumbersPlusPrevAndNext" />
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

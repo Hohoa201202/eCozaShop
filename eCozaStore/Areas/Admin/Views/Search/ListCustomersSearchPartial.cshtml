@@ -1,0 +1,30 @@
+﻿@model List<TblCustomer>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <tr>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@item.CustomerId</td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                <a href="#">@item.FullName</a>
+            </td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.Phone
+            </td>
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important; min-width: 100px !important;">
+                @item.Email
+            </td>
+
+            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                @item.Address
+            </td>
+
+
+            <td style="min-width: 150px !important;">
+                <a class="btn btn-primary btn-sm" title="xem" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Details" asp-route-customerID="@item.CustomerId"><i class="ri-eye-line"></i></a>
+                <a class="btn btn-danger btn-sm" title="Xóa" asp-area="Admin" asp-controller="AdminCustomers" asp-action="hideCustomers" asp-route-id="@item.CustomerId"><i class="bi bi-trash"></i></a>
+            </td>
+
+        </tr>
+    }
+}

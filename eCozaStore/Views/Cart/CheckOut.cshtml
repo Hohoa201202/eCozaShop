@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="p-d-desktop">
+    <div class="container">
+        <div class="bread-crumb p-l-25 p-r-15 p-t-30 p-lr-0-lg" style="text-align: center; font-size: 20px; margin: 38px 0">
+            <a asp-action="Index" asp-controller="Home" class="">
+                <i class="fa fa-angle-left m-l-9 m-r-10" aria-hidden="true"></i>
+                Quay lại trang chủ
+            </a>
+            <span style="padding: 0 24px"> Đặt hàng thành công </span>
+            <a asp-action="Order" asp-controller="Cart" class="">
+                Xem đơn hàng
+                <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+

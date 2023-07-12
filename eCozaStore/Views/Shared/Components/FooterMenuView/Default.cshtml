@@ -1,0 +1,94 @@
+﻿@using eCozaStore.Models
+@model IList<TblMenu>
+
+<div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="logo" src="../files/images/icons/logo-02.png">
+                    </a>
+                    <p class="mt-3 mb-4">Cái tên CozaStore được tạo ra rất ngẫu hứng, xuất phát từ “Chuỗi ngày u buồn về sự nghiệp, tương lai trong quá khứ của chính mình” – 
+                        theo lời chia sẻ của Degrey’s founder. Là một local brand mang khuynh hướng Á Đông, Degrey luôn cố gắng mang đến những thông điệp văn hoá ý nghĩa qua 
+                        từng đường nét thiết kế.</p>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                            <button class="btn btn-dark">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    @foreach (var dsMenu1 in Model.Where(m => (m.Levels == 1) && m.Position == 3).OrderBy(p => p.MenuOrder).Take(3).ToList())
+                    {
+                        var IdMenu1 = dsMenu1.MenuId;
+
+                        var dsMenu2 = Model.Where(m => m.ParentId == IdMenu1).OrderBy(p => p.MenuOrder).ToList();
+
+                        if (dsMenu1.MenuOrder == 1)
+                        {
+                            if (dsMenu2.Count == 0)
+                            {
+                                <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                        <h3 class="text-light mb-0">@dsMenu1.MenuName</h3>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                        <h3 class="text-light mb-0">@dsMenu1.MenuName</h3>
+                                    </div>
+                                    @foreach (var item in dsMenu2)
+                                    {
+                                        <div class="d-flex mb-2">
+                                            <i class="bi @item.Link text-primary me-2"></i>
+                                            <p class="mb-0">@item.MenuName</p>
+                                        </div>
+                                    }
+                                    <div class="d-flex mt-4">
+                                        <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                        <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                        <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                        <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            if (dsMenu2.Count == 0)
+                            {
+                                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                        <h3 class="text-light mb-0">@dsMenu1.MenuName</h3>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                    <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                        <h3 class="text-light mb-0">@dsMenu1.MenuName</h3>
+                                    </div>
+                                    <div class="link-animated d-flex flex-column justify-content-start">
+                                        @foreach (var item in dsMenu2)
+                                        {
+                                            <a class="text-light mb-2" href="#"><i class="bi @item.Link text-primary me-2"></i>@item.MenuName</a>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

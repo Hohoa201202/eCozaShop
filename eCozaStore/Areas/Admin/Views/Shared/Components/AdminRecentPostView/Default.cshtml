@@ -1,0 +1,36 @@
+﻿@using eCozaStore.Models;
+@using eCozaStore.Utilities
+@model IList<TblPost>
+
+<div class="filter">
+    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+        <li class="dropdown-header text-start">
+            <h6>Filter</h6>
+        </li>
+
+        <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+        <li><a class="dropdown-item" href="#">Tháng nay</a></li>
+        <li><a class="dropdown-item" href="#">Năm nay</a></li>
+    </ul>
+</div>
+
+<div class="card-body pb-0" style="min-height: 150px !important;">
+    <h5 class="card-title">Tin tức &amp; Cập nhật <span>| Hôm nay</span></h5>
+
+    <div class="news">
+        @foreach(var item in Model) {
+            string Url = Functions.TitleSlugGeneration("blogDetail", item.Title, item.PostId);
+
+            <div class="post-item clearfix">
+                <img src="@item.Thumb" alt="@item.Title">
+                <h4 style="display: -webkit-box !important; -webkit-box-orient: vertical !important; -webkit-line-clamp: 2 !important; overflow: hidden !important;"><a href="/@Url">@item.Title</a></h4>
+                <p style="display: -webkit-box !important; -webkit-box-orient: vertical !important; -webkit-line-clamp: 1 !important; overflow: hidden !important;">@item.Abstract</p>
+            </div>
+
+        }
+
+    
+    </div><!-- End sidebar recent posts-->
+
+</div>

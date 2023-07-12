@@ -1,0 +1,421 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = eCozaStore
+build_property.RootNamespace = eCozaStore
+build_property.ProjectDir = E:\__Learning\2022_2023_HK1_K5\Phát triển ứng dụng web (ASP.NET)\MyProject\eCozaStore\eCozaStore\eCozaStore\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = E:\__Learning\2022_2023_HK1_K5\Phát triển ứng dụng web (ASP.NET)\MyProject\eCozaStore\eCozaStore\eCozaStore
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminAccounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2NvdW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCategories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCategories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCategories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCategories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCategories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCustomers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCustomers/hideCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcaGlkZUN1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminCustomers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DdXN0b21lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminLogin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Mb2dpblxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminMenus/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZW51c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminMenus/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZW51c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminMenus/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZW51c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminMenus/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZW51c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminMenus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5NZW51c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminOrderDetails/ChangeStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5PcmRlckRldGFpbHNcQ2hhbmdlU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminOrderDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5PcmRlckRldGFpbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminOrderDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5PcmRlckRldGFpbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminPosts/IndexApprovePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qb3N0c1xJbmRleEFwcHJvdmVQb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminProducts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminProducts/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminProducts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminProducts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminProducts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9kdWN0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Sb2xlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminSliders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminSliders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminSliders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminSliders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/AdminSliders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5TbGlkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/FileManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmlsZU1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListAccountsSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RBY2NvdW50c1NlYXJjaFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListCategoriesSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RDYXRlZ29yaWVzU2VhcmNoUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListCustomersSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RDdXN0b21lcnNTZWFyY2hQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListMenusSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RNZW51c1NlYXJjaFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListPostsSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RQb3N0c1NlYXJjaFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Search/ListProductsSearchPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VhcmNoXExpc3RQcm9kdWN0c1NlYXJjaFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/Components/AdminBestSellersView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5CZXN0U2VsbGVyc1ZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/Components/AdminMenuView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5NZW51Vmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/Components/AdminRecentPostView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5SZWNlbnRQb3N0Vmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/Components/AdminRecentSalesView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWRtaW5SZWNlbnRTYWxlc1ZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/_AdminLayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/_SummerNote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TdW1tZXJOb3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Cart/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Cart/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Cart/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/BlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/EditMyPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEVkaXRNeVBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/Favourite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEZhdm91cml0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/MyAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XE15QWRkcmVzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/MyAccount/MyPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlBY2NvdW50XE15UG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Search/ListSearchProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXExpc3RTZWFyY2hQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/CommentView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ29tbWVudFZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/FeaturedProductsView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmVhdHVyZWRQcm9kdWN0c1ZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/FeedbackView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmVlZGJhY2tWaWV3XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/FooterMenuView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyTWVudVZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/HotCategoryView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG90Q2F0ZWdvcnlWaWV3XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/MenuView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/MyAccountView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTXlBY2NvdW50Vmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/OrderDetailView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcT3JkZXJEZXRhaWxWaWV3XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/PostView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUG9zdFZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/ProductView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvZHVjdFZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/RecentPostView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmVjZW50UG9zdFZpZXdcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/RelatedProductsView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmVsYXRlZFByb2R1Y3RzVmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Components/SliderView/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2xpZGVyVmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-3mqqjxrbat
+
+[E:/__Learning/2022_2023_HK1_K5/Phát triển ứng dụng web (ASP.NET)/MyProject/eCozaStore/eCozaStore/eCozaStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mqnax4zotk

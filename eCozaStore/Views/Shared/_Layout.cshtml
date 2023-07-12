@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - eCozaStore</title>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/files/images/icons/favicon.png" />
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8a67f7fd97.js" crossorigin="anonymous"></script>
+    <!-- Libraries Stylesheet -->
+    <link href="~/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <!--===============================================================================================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+</head>
+<body class="animsition">
+
+    <!-- Header -->
+    <header class="header-v3">
+        @await Component.InvokeAsync("MenuView")
+    </header>
+    <!-- Header END-->
+    <!-- My Account -->
+    @await Component.InvokeAsync("MyAccountView")
+
+    @RenderBody()
+
+    <!-- Vendor Start -->
+    <div class="container wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel">
+                    <img src="~/files/images/icons/vendor-1.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-2.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-3.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-4.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-5.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-6.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-7.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-8.jpg" alt="">
+                    <img src="~/files/images/icons/vendor-9.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+    <!-- Footer Start -->
+    @await Component.InvokeAsync("FooterMenuView")
+    <!-- Footer End -->
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/lib/wow/wow.min.js"></script>
+    <script src="~/assets/lib/easing/easing.min.js"></script>
+    <script src="~/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/assets/lib/counterup/counterup.min.js"></script>
+    <script src="~/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/assets/js/main1.js"></script>
+
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function () {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/assets/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/slick/slick.min.js"></script>
+    <script src="~/assets/js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/parallax100/parallax100.js"></script>
+    <script>
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script>
+        $('.gallery-lb').each(function () { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: 'a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $('.js-addwish-b2').on('click', function (e) {
+            e.preventDefault();
+        });
+
+        $('.js-addwish-b2').each(function () {
+            var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+            $(this).on('click', function () {
+                swal(nameProduct, "đã được thêm vào sản phẩm yêu thích !", "success");
+
+                $(this).addClass('js-addedwish-b2');
+                $(this).off('click');
+            });
+        });
+
+        $('.js-addwish-detail').each(function () {
+            var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+            $(this).on('click', function () {
+                swal(nameProduct, "đã được thêm vào sản phẩm yêu thích !", "success");
+
+                $(this).addClass('js-addedwish-detail');
+                $(this).off('click');
+            });
+        });
+
+        /*---------------------------------------------*/
+
+        $('.js-addcart-detail').each(function () {
+            var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+            $(this).on('click', function () {
+                swal(nameProduct, "đã được thêm vào giỏ hàng !", "success");
+            });
+        });
+
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function () {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function () {
+                ps.update();
+            })
+        });
+    </script>
+    <script>
+        $('.js-show-filter').on('click', function () {
+            $(this).toggleClass('show-filterr');
+            $('.show-filterr + .panel-filter').slideToggle(400);
+
+            if ($('.js-show-search').hasClass('show-search')) {
+                $('.js-show-search').removeClass('show-search');
+                $('.panel-search').slideUp(400);
+            }
+        });
+
+        $('.js-show-search').on('click', function () {
+            $(this).toggleClass('show-search');
+            $('.panel-search').slideToggle(400);
+
+            if ($('.js-show-filter').hasClass('show-filter')) {
+                $('.js-show-filter').removeClass('show-filter');
+                $('.panel-filter').slideUp(400);
+            }
+        })
+
+        /*==================================================================
+        [ Xác nhận xóa địa chỉ ]*/
+        $('.js-show-dell1').on('click', function (e) {
+            e.preventDefault();
+            $('.js-dell1').addClass('show-dell1');
+            $(this).addClass('show-dellll');
+        });
+
+        $('.js-hide-dell1').on('click', function () {
+            $('.js-dell1').removeClass('show-dell1');
+        });
+
+        /*==================================================================
+        [ Sửa địa chỉ ]*/
+        $('.js-show-editt1').on('click', function (e) {
+            e.preventDefault();
+            $('.js-editt1').addClass('show-editt1');
+        });
+
+        $('.js-hide-editt1').on('click', function () {
+            $('.js-editt1').removeClass('show-editt1');
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/assets/js/main.js"></script>
+    
+    @RenderSection(name: "Scripts", required: false)
+</body>
+</html>

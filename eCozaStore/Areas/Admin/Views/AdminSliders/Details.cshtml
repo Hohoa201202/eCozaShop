@@ -1,0 +1,183 @@
+﻿@model eCozaStore.Models.TblSlider
+@{
+    ViewData["Title"] = "Chi tiết slide" + Model.Title;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pagetitle">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-area="Admin" asp-controller="AdminSliders" asp-action="Index">Danh sách slide</a></li>
+            <li class="breadcrumb-item active">Chi tiết slide : @Model.Title</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body" style="padding: 50px ;">
+                    <form>
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="row d-flex align-items-center justify-content-between">
+
+                                    <div class="col-6">
+                                        <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist" style="margin-bottom: 30px !important; padding: 50px 0 0 0 !important;">
+                                            <li class="nav-item flex-fill" role="presentation">
+                                                <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-home" type="button" role="tab" aria-controls="home"
+                                                        aria-selected="true">
+                                                    Thông tin chi tiết
+                                                </button>
+                                            </li>
+                                            <li class="nav-item flex-fill" role="presentation">
+                                                <button class="nav-link w-100" id="profile-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-profile" type="button" role="tab" aria-controls="profile"
+                                                        aria-selected="false" tabindex="-1">
+                                                    Hình ảnh
+                                                </button>
+                                            </li>
+                                            <li class="nav-item flex-fill" role="presentation">
+                                                <button class="nav-link w-100" id="contact-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#bordered-justified-contact" type="button" role="tab" aria-controls="contact"
+                                                        aria-selected="false" tabindex="-1">
+                                                    Mô tả thêm
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-6" style="text-align: -webkit-right !important">
+
+                                        <div class="col-md-4" style="text-align: right !important;">
+                                            <a class="btn btn-primary" asp-area="Admin" asp-controller="AdminSliders" asp-action="Edit" asp-route-id="@Model.SliderId">
+                                                <i class="bx bx-highlight m-r-5"></i>
+                                                <span>Chỉnh sửa</span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card" style="padding-top: 50px !important">
+                            <div class="card-body">
+                                <div class="tab-content pt-2" id="borderedTabJustifiedContent">
+
+                                    <div class="tab-pane fade show active" id="bordered-justified-home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover e-commerce-table" style="margin-bottom: 50px !important;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">ID:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.SliderId</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Tiêu đề:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.Title</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Danh mục:</td>
+                                                        @if (Model.CategoryID != null)
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                @Model.category.CategoryName
+                                                            </td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                                <span class="badge bg-info">
+                                                                    <i class=" bx bx-x"></i>
+                                                                    No
+                                                                </span>
+                                                            </td>
+                                                        }
+                                                       
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Vị trí:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.Position</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Thứ tự:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">@Model.SliderOrder</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">Trạng thái:</td>
+                                                        <td style="padding: 1rem !important; vertical-align:-webkit-baseline-middle !important;">
+                                                            @if (Model.IsActive)
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="IsActive" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="form-check form-switch" style="padding-bottom: 8px !important;">
+                                                                    <input asp-for="IsActive" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" disabled>
+                                                                    <label for="IsActive" class="form-check-label"></label>
+                                                                </div>
+                                                            }
+                                                        </td>
+                                                    </tr>
+
+
+                                                </tbody>
+
+
+                                            </table>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="tab-pane fade" id="bordered-justified-profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                        @if(Model.Images != null) {
+                                            <img width="50%" height="auto" src="@Model.Images" alt="@Model.Title" />
+                                        }
+                                        else {
+                                            <img width="50%" height="auto" src="~/files/images/slider/default.jpg" alt="@Model.Title" />
+                                        }
+                                    </div>
+
+                                    <div class="tab-pane fade" id="bordered-justified-contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        <textarea id="Abstract" asp-for="Abstract"></textarea>
+                                    </div>
+
+                                </div><!-- End Bordered Tabs Justified -->
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+@*Kích hoạt summernote*@
+
+
+@{
+    var summerNote = new eCozaStore.Areas.Admin.Models.SummerNote("#Abstract");
+
+    <partial name="_SummerNote" model="summerNote" />
+}
+
+
